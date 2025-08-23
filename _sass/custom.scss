@@ -1,0 +1,30 @@
+/* === Typography === */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 700;
+}
+
+/* === Sidebar photo === */
+.sidebar .author__avatar img {
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* === Accent color === */
+:root {
+  --accent: #0047ab; /* Columbia blue */
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: underline; }
+
+.sidebar .author__urls li a {
+  color: var(--accent);
+}
