@@ -1,67 +1,31 @@
-/* ===== Utilities (remove after verifying load) ===== */
-/* Temporary visual cue to prove custom.scss is loaded */
-body::after {
-  content: "";
-  display: none; /* set to block to debug: small green dot in bottom-right */
-  position: fixed; right: 8px; bottom: 8px; width: 8px; height: 8px; background: #556B2F;
-  border-radius: 50%;
-}
-
-/* ===== Typography ===== */
-html, body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
+/* ---- Typography ---- */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.65;
-  color: #222;
 }
+
 h1, h2, h3, h4, h5, h6,
 .greedy-nav a, .greedy-nav .visible-links a {
-  font-family: Merriweather, Georgia, serif !important;
+  font-family: Merriweather, Georgia, serif;
   font-weight: 700;
   letter-spacing: .2px;
   line-height: 1.3;
 }
 
-/* ===== Accent color ===== */
-:root { --accent: #556B2F; } /* olive green */
+/* ---- Accent (olive) ---- */
+:root { --accent: #556B2F; }
 .page__content a,
-.site-footer a,
 .masthead a,
-.sidebar .author__urls li a {
-  color: var(--accent) !important;
-}
+.site-footer a { color: var(--accent); }
 .page__content a:hover,
-.site-footer a:hover,
 .masthead a:hover,
-.sidebar .author__urls li a:hover { text-decoration: underline; }
-.page__content a:visited { color: var(--accent) !important; }
+.site-footer a:hover { text-decoration: underline; }
+.page__content a:visited { color: var(--accent); }
 
-/* ===== Sidebar avatar size ===== */
-.author__avatar img {
-  width: 200px; height: auto; border-radius: 50%;
-}
-@media (max-width: 900px) {
-  .author__avatar img { width: 140px; }
-}
+/* ---- Avatar size only (no card backgrounds) ---- */
+.author__avatar img { width: 150px; height: auto; border-radius: 50%; }
+@media (max-width: 900px) { .author__avatar img { width: 130px; } }
 
-/* ===== Light/Dark modes (robust) ===== */
-/* Many AcademicPages skins load both *_light and *_dark; use prefers-color-scheme + specific selectors */
-@media (prefers-color-scheme: dark) {
-  html { color-scheme: dark; }
-  body { background: #111 !important; color: #e8e8e8 !important; }
-  .page { color: #e8e8e8; }
-  .masthead { background: #0f0f0f !important; border-color: #1a1a1a !important; }
-  .sidebar { background: #0f0f0f !important; }
-  .page__footer, .site-footer { background: #0f0f0f !important; color: #cfcfcf !important; }
-  .page__content h2 { border-bottom: 1px solid #333; }
-  .page__content a,
-  .site-footer a,
-  .masthead a,
-  .sidebar .author__urls li a { color: #85a15a !important; } /* olive-tinted for dark */
-}
-
-/* ===== Optional: subtle section dividers ===== */
-.page .page__content h2 {
-  border-bottom: 1px solid #eee; padding-bottom: .25rem; margin-top: 1.5rem;
-}
-.page .page__content li { margin: .25rem 0; }
+/* ---- Gentle section divider ---- */
+.page .page__content h2 { border-bottom: 1px solid #eaeaea; padding-bottom: .25rem; margin-top: 1.5rem; }
