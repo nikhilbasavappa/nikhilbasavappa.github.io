@@ -5,7 +5,6 @@ layout: single
 author_profile: true
 ---
 
----
 
 ## Current Projects
 
@@ -18,7 +17,7 @@ author_profile: true
 (with Raissa Fabregas and Jack Willis)
 
 
---
+
 ## Policy 
 
 ### [Harnessing the potential of community-driven groundwater management in the Global South: Experiences and recommendations](https://t20southafrica.org/commentaries/harnessing-the-potential-of-community-driven-groundwater-management-in-the-global-south-experiences-and-recommendations/)
