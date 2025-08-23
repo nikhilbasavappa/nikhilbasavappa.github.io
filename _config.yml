@@ -25,7 +25,7 @@ author:
   email    : "nikhil.b@columbia.edu"
 
 owner:
-  avatar: "images/headshot.png"
+  avatar: "headshot.png"
 
   # Leave all academic/social fields blank so no icons render:
   googlescholar :
