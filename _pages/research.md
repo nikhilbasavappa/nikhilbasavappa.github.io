@@ -19,7 +19,7 @@ author_profile: true
 
 
 --
-## Other 
+## Policy 
 
 ### [Harnessing the potential of community-driven groundwater management in the Global South: Experiences and recommendations](https://t20southafrica.org/commentaries/harnessing-the-potential-of-community-driven-groundwater-management-in-the-global-south-experiences-and-recommendations/)
 (with Nitin Bassi, Anik Bhaduri, Soorya K K, Ekansha Khanduja, Ricardo Pommer Muñoz and Yashita Singhi)
