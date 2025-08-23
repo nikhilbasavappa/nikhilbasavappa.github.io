@@ -15,7 +15,7 @@ repository    : "nikhilbasavappa/nikhilbasavappa.github.io"
 # Author (sidebar card)
 # =========================
 author:
-  avatar   : "/images/headshot.jpg"   # place your headshot at /images/profile.png
+  avatar   : "/images/headshot.png"   # place your headshot at /images/profile.png
   name     : "Nikhil Basavappa"
   pronouns :
   bio      : "PhD Candidate in Economics at Columbia University."
