@@ -1,18 +1,24 @@
 /* === Typography === */
+
+/* Body text: clean sans-serif (Inter) */
 body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.65;
+  color: #222; /* slightly softer than pure black */
 }
 
-h1, h2, h3 {
+/* Headings: academic serif (Merriweather) */
+h1, h2, h3, h4, h5, h6 {
   font-family: Merriweather, Georgia, serif;
   font-weight: 700;
+  letter-spacing: .2px;
+  line-height: 1.3;
 }
 
 /* === Sidebar photo === */
 .sidebar .author__avatar img {
-  width: 140px;
+  width: 200px;
   height: auto;
   border-radius: 50%;
 }
