@@ -8,7 +8,7 @@ theme: null
 remote_theme: null
 
 locale         : "en-US"
-site_theme     : "default"   # or "air" if your fork supports it
+site_theme     : "air"   # or "air" if your fork supports it
 title          : "Nikhil Basavappa"
 title_separator: "-"
 name          : &name "Nikhil Basavappa"
