@@ -14,90 +14,92 @@
     background-color: #34495e !important;
 }
 
-.masthead .site-title,
-.masthead .site-subtitle {
+.masthead__inner-wrap {
+    background-color: #34495e !important;
+}
+
+.site-title {
     color: #ffffff !important;
 }
 
-.greedy-nav a {
+.greedy-nav a,
+.greedy-nav .visible-links a {
     color: #ffffff !important;
 }
 
-.greedy-nav a:hover {
+.greedy-nav a:hover,
+.greedy-nav .visible-links a:hover {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.greedy-nav .navicon {
-    background: #ffffff !important;
+.greedy-nav .hidden-links {
+    background: #34495e !important;
 }
 
-.greedy-nav .navicon:before,
-.greedy-nav .navicon:after {
-    background: #ffffff !important;
+.greedy-nav .hidden-links a {
+    color: #ffffff !important;
 }
 
-/* Link Colors */
-a {
+/* Link Colors - More specific selectors */
+.page__content a,
+.sidebar a,
+.archive a,
+.list__item a {
     color: #3498db !important;
     text-decoration: none !important;
 }
 
-a:hover {
+.page__content a:hover,
+.sidebar a:hover,
+.archive a:hover,
+.list__item a:hover {
     color: #2980b9 !important;
     text-decoration: underline !important;
 }
 
-a:visited {
+.page__content a:visited,
+.sidebar a:visited,
+.archive a:visited,
+.list__item a:visited {
     color: #8e44ad !important;
 }
 
 /* Sidebar Styling */
 .sidebar {
     background-color: #f8f9fa !important;
-    border-right: 1px solid #e1e8ed !important;
 }
 
-.author__avatar img {
+.author__avatar {
     border: 3px solid #34495e !important;
+    border-radius: 50% !important;
 }
 
-.author__content .author__name {
+.author__name {
     color: #2c3e50 !important;
 }
 
-.author__content .author__bio {
+.author__bio {
     color: #7f8c8d !important;
 }
 
-.author__urls a {
-    color: #3498db !important;
+.author__urls-wrapper {
+    background-color: transparent !important;
 }
 
-.author__urls a:hover {
-    color: #2980b9 !important;
+.author__urls .label {
+    background-color: #34495e !important;
+    color: #ffffff !important;
 }
 
-/* Main Content */
-body {
+/* Main Content Text */
+.page__content,
+.page__content p,
+.sidebar .author__content {
     color: #2c3e50 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #2c3e50 !important;
-}
-
-/* Buttons */
-.btn {
-    background-color: #3498db !important;
-    border: 1px solid #3498db !important;
-    color: #ffffff !important;
-}
-
-.btn:hover {
-    background-color: #2980b9 !important;
-    border-color: #2980b9 !important;
-    color: #ffffff !important;
 }
 
 /* Footer */
@@ -114,26 +116,46 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* Code Blocks */
-pre,
-code {
-    background-color: #f8f9fa !important;
-    border: 1px solid #e1e8ed !important;
+/* Buttons */
+.btn,
+.btn--primary {
+    background-color: #3498db !important;
+    border: 1px solid #3498db !important;
+    color: #ffffff !important;
 }
 
-/* Archive/List Items */
+.btn:hover,
+.btn--primary:hover {
+    background-color: #2980b9 !important;
+    border-color: #2980b9 !important;
+    color: #ffffff !important;
+}
+
+/* Archive and list items */
+.archive__item-title {
+    margin-bottom: 0.25em !important;
+}
+
 .archive__item-title a {
     color: #3498db !important;
+    text-decoration: none !important;
 }
 
 .archive__item-title a:hover {
     color: #2980b9 !important;
+    text-decoration: underline !important;
 }
 
-/* Test border to confirm CSS is loading */
-body {
-    border-top: 3px solid red !important;
+/* Code blocks */
+pre,
+code {
+    background-color: #f8f9fa !important;
+    border: 1px solid #e1e8ed !important;
+    color: #2c3e50 !important;
 }
+
+/* Remove test border once everything works */
+/* body { border-top: 3px solid red !important; } */
 </style>
 
 <!-- Support for Academicons -->
