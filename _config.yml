@@ -1,3 +1,5 @@
+
+
 # =========================
 # Basic Site Settings
 # =========================
@@ -204,3 +206,11 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# =========================
+# Analytics
+# =========================
+analytics:
+  provider: "google-analytics-4"
+  google:
+    tracking_id: "G-MT9F7VPEDJ"   # replace with your ID
