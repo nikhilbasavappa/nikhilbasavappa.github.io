@@ -3,6 +3,10 @@
 # =========================
 # Basic Site Settings
 # =========================
+# Add this near the top of your _config.yml
+theme: null
+remote_theme: null
+
 locale         : "en-US"
 site_theme     : "custom"   # or "air" if your fork supports it
 title          : "Nikhil Basavappa"
