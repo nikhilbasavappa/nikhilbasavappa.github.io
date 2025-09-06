@@ -1,0 +1,157 @@
+/* Custom styling for Nikhil's Academic Website */
+
+/* Navigation/Header Colors */
+.masthead {
+    background-color: #34495e !important;
+}
+
+.masthead .site-title,
+.masthead .site-subtitle {
+    color: #ffffff !important;
+}
+
+.greedy-nav a {
+    color: #ffffff !important;
+}
+
+.greedy-nav a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.greedy-nav .navicon {
+    background: #ffffff !important;
+}
+
+.greedy-nav .navicon:before,
+.greedy-nav .navicon:after {
+    background: #ffffff !important;
+}
+
+/* Link Colors */
+a {
+    color: #3498db !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #2980b9 !important;
+    text-decoration: underline !important;
+}
+
+a:visited {
+    color: #8e44ad !important;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #f8f9fa !important;
+    border-right: 1px solid #e1e8ed !important;
+}
+
+.author__avatar img {
+    border: 3px solid #34495e !important;
+}
+
+.author__content .author__name {
+    color: #2c3e50 !important;
+}
+
+.author__content .author__bio {
+    color: #7f8c8d !important;
+}
+
+.author__urls a {
+    color: #3498db !important;
+}
+
+.author__urls a:hover {
+    color: #2980b9 !important;
+}
+
+/* Main Content */
+body {
+    color: #2c3e50 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50 !important;
+}
+
+/* Buttons */
+.btn {
+    background-color: #3498db !important;
+    border: 1px solid #3498db !important;
+    color: #ffffff !important;
+}
+
+.btn:hover {
+    background-color: #2980b9 !important;
+    border-color: #2980b9 !important;
+    color: #ffffff !important;
+}
+
+/* Footer */
+.page__footer {
+    background-color: #34495e !important;
+    color: #ffffff !important;
+}
+
+.page__footer a {
+    color: #ffffff !important;
+}
+
+.page__footer a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Code Blocks */
+pre,
+code {
+    background-color: #f8f9fa !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+/* Archive/List Items */
+.archive__item-title a {
+    color: #3498db !important;
+}
+
+.archive__item-title a:hover {
+    color: #2980b9 !important;
+}
+
+/* Pagination */
+.pagination a {
+    color: #3498db !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+.pagination a:hover {
+    background-color: #3498db !important;
+    color: #ffffff !important;
+}
+
+/* Tables */
+table {
+    border: 1px solid #e1e8ed !important;
+}
+
+th {
+    background-color: #f8f9fa !important;
+    color: #2c3e50 !important;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+    border: 1px solid #e1e8ed !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db !important;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+}
