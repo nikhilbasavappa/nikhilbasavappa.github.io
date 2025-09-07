@@ -84,6 +84,24 @@ $sidebar-screen-min-width   : 1024px;
     font-weight: 600 !important;
 }
 
+/* Force rust orange hover underlines for navigation */
+.masthead .greedy-nav .visible-links a:hover {
+    color: $darker-primary-color !important;
+    background-color: transparent !important;
+    text-decoration: underline !important;
+    text-decoration-color: #a0522d !important;
+}
+
+.site-title:hover {
+    color: $darker-primary-color !important;
+    text-decoration: underline !important;
+    text-decoration-color: #a0522d !important;
+}
+
+/* Also catch any other navigation hover effects */
+.masthead a:hover {
+    text-decoration-color: #a0522d !important;
+}
 .site-title:hover {
     color: $darker-primary-color !important;
 }
