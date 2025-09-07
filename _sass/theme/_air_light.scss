@@ -63,24 +63,25 @@ $sidebar-screen-min-width   : 1024px;
     color: $text !important;
 }
 
-/* Style navigation links in olive green */
+/* Style navigation links with olive green text only */
 .masthead .greedy-nav .visible-links a {
-    background-color: $primary-color !important;
-    color: #ffffff !important;
+    color: $primary-color !important;
+    background-color: transparent !important;
     padding: 8px 16px !important;
     margin: 0 4px !important;
-    border-radius: 4px !important;
     text-decoration: none !important;
+    font-weight: 500 !important;
 }
 
 .masthead .greedy-nav .visible-links a:hover {
-    background-color: $darker-primary-color !important;
-    color: #ffffff !important;
+    color: $darker-primary-color !important;
+    background-color: transparent !important;
 }
 
-/* Also style the site title if you want it to match */
+/* Also style the site title in olive green */
 .site-title {
     color: $primary-color !important;
+    font-weight: 600 !important;
 }
 
 .site-title:hover {
