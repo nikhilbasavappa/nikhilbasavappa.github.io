@@ -52,3 +52,23 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color-light           : #{$light-primary-color};
     --global-thead-color                : #{$background-lighter};
 }
+
+/* Force masthead background color */
+.masthead {
+    background-color: $primary-color !important;
+}
+
+.masthead__inner-wrap {
+    background-color: $primary-color !important;
+}
+
+/* Ensure navigation links are readable */
+.greedy-nav a,
+.greedy-nav .visible-links a {
+    color: #ffffff !important;
+}
+
+.greedy-nav a:hover,
+.greedy-nav .visible-links a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
