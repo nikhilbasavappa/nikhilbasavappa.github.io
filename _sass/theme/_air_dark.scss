@@ -33,7 +33,7 @@ $sidebar-screen-min-width   : 1024px;
 html[data-theme="dark"] {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$footer};
+    --global-footer-bg-color            : #{$background};
     --global-border-color               : #{$light-primary-color};
     --global-dark-border-color          : #{$background-light};
     --global-code-background-color      : #fafafa;
@@ -49,19 +49,33 @@ html[data-theme="dark"] {
     --global-thead-color                : #{$background-lighter};
 }
 
-/* Make navigation links readable in dark mode */
+/* Make navigation links readable with softer approach */
 html[data-theme="dark"] .masthead .greedy-nav .visible-links a {
-    color: #6b8e23 !important;  /* Olive green for readability */
+    color: #f5f5f5 !important;  /* Very light gray for readability */
 }
 
 html[data-theme="dark"] .masthead .greedy-nav .visible-links a:hover {
-    color: #8fbc8f !important;  /* Lighter green on hover */
+    color: #e0e0e0 !important;  /* Slightly dimmed on hover */
 }
 
 html[data-theme="dark"] .site-title {
-    color: #6b8e23 !important;  /* Make site title readable too */
+    color: #f5f5f5 !important;  /* Very light gray for readability */
 }
 
 html[data-theme="dark"] .site-title:hover {
-    color: #8fbc8f !important;
+    color: #e0e0e0 !important;
+}
+
+/* Fix masthead and footer backgrounds to match main page */
+html[data-theme="dark"] .masthead {
+    background-color: #{$background} !important;
+}
+
+html[data-theme="dark"] .page__footer {
+    background-color: #{$background} !important;
+    color: #{$text} !important;
+}
+
+html[data-theme="dark"] .page__footer a {
+    color: #{$text} !important;
 }
