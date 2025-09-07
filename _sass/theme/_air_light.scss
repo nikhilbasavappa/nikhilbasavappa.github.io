@@ -53,22 +53,36 @@ $sidebar-screen-min-width   : 1024px;
     --global-thead-color                : #{$background-lighter};
 }
 
-/* Force masthead background color */
-.masthead {
-    background-color: $primary-color !important;
+/* Reset footer to neutral cream color */
+.page__footer {
+    background-color: $background-light !important;
+    color: $text !important;
 }
 
-.masthead__inner-wrap {
-    background-color: $primary-color !important;
+.page__footer a {
+    color: $text !important;
 }
 
-/* Ensure navigation links are readable */
-.greedy-nav a,
-.greedy-nav .visible-links a {
+/* Style navigation links in olive green */
+.masthead .greedy-nav .visible-links a {
+    background-color: $primary-color !important;
+    color: #ffffff !important;
+    padding: 8px 16px !important;
+    margin: 0 4px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+}
+
+.masthead .greedy-nav .visible-links a:hover {
+    background-color: $darker-primary-color !important;
     color: #ffffff !important;
 }
 
-.greedy-nav a:hover,
-.greedy-nav .visible-links a:hover {
-    color: rgba(255, 255, 255, 0.8) !important;
+/* Also style the site title if you want it to match */
+.site-title {
+    color: $primary-color !important;
+}
+
+.site-title:hover {
+    color: $darker-primary-color !important;
 }
