@@ -105,3 +105,23 @@ $sidebar-screen-min-width   : 1024px;
 .site-title:hover {
     color: $darker-primary-color !important;
 }
+
+/* Nuclear approach to force rust orange hover effects */
+.masthead .greedy-nav .visible-links a:hover,
+.masthead .greedy-nav a:hover,
+.site-title:hover {
+    text-decoration-color: #a0522d !important;
+    border-bottom-color: #a0522d !important;
+    border-color: #a0522d !important;
+    box-shadow: 0 1px 0 #a0522d !important;
+    outline-color: #a0522d !important;
+}
+
+/* Target any pseudo-elements that might be creating the line */
+.masthead .greedy-nav .visible-links a:hover::before,
+.masthead .greedy-nav .visible-links a:hover::after,
+.site-title:hover::before,
+.site-title:hover::after {
+    background-color: #a0522d !important;
+    border-color: #a0522d !important;
+}
