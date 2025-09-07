@@ -3,17 +3,17 @@
    ========================================================================== */
 
 /* Color codes used for the theme */
-$primary-color              : #6b8e23;  /* Olive green for headers */
+$primary-color              : #556b2f;  /* Darker olive green */
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
-$background                 : #fefcf3;  /* Warm cream background */
-$background-light           : #f7f5ed;  /* Slightly darker cream for sidebar */
-$background-lighter         : #f0ede4;  /* Even darker cream for accents */
-$text                       : #3c3c3c;  /* Dark grey text for readability */
-$link                       : #8fbc8f;  /* Medium olive green for links */
-$link-dark                  : #6b8e23;  /* Darker olive for hover */
-$link-light                 : #9acd32;  /* Lighter olive for visited */
+$background                 : #ffffff;  /* Pure white background */
+$background-light           : #f9f9f9;  /* Very light gray for sidebar */
+$background-lighter         : #f5f5f5;  /* Light gray for accents */
+$text                       : #333333;  /* Dark text for readability */
+$link                       : #556b2f;  /* Match the darker olive green */
+$link-dark                  : #3d4f21;  /* Even darker for hover */
+$link-light                 : #6b8e23;  /* Slightly lighter for visited */
 $footer                     : $primary-color;
 
 /* Color codes used for the site */
