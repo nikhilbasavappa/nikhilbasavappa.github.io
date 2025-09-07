@@ -110,11 +110,11 @@ $sidebar-screen-min-width   : 1024px;
 .masthead .greedy-nav .visible-links a:hover,
 .masthead .greedy-nav a:hover,
 .site-title:hover {
-    text-decoration-color: #a0522d !important;
-    border-bottom-color: #a0522d !important;
-    border-color: #a0522d !important;
-    box-shadow: 0 1px 0 #a0522d !important;
-    outline-color: #a0522d !important;
+    text-decoration-color: #cd853f !important;  /* Lighter rust orange */
+    border-bottom-color: #cd853f !important;
+    border-color: #cd853f !important;
+    box-shadow: 0 1px 0 #cd853f !important;
+    outline-color: #cd853f !important;
 }
 
 /* Target any pseudo-elements that might be creating the line */
@@ -122,6 +122,6 @@ $sidebar-screen-min-width   : 1024px;
 .masthead .greedy-nav .visible-links a:hover::after,
 .site-title:hover::before,
 .site-title:hover::after {
-    background-color: #a0522d !important;
-    border-color: #a0522d !important;
+    background-color: #cd853f !important;
+    border-color: #cd853f !important;
 }
