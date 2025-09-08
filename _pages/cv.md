@@ -7,5 +7,5 @@ redirect_from:
   - /resume
 ---
 
-[Curriculum Vitae](/files/CV.pdf)
+[Curriculum Vitae](/files/cv/basavappa_CV_2025.pdf)
 
