@@ -1,46 +1,54 @@
-/* ==== Sidebar & avatar: no-overlap, predictable sizing ==== */
+/* ==========================================================================
+   Custom overrides for sidebar & avatar
+   ========================================================================== */
 
-/* 1) On wide screens: give the sidebar a real pixel width and
-      push the main content over by at least that much. */
-@media screen and (min-width: 1024px) {
-  .sidebar {
-    width: 300px !important;         /* sidebar width */
-    max-width: none !important;
+/* Sidebar width tweaks */
+.sidebar {
+  @include breakpoint($large) {
+    @include span(3 of 12);   /* dedicate 3/12 of the grid to sidebar */
   }
 
-  .page {
-    margin-left: 320px !important;   /* sidebar width + ~20px gutter */
+  @include breakpoint($x-large) {
+    max-width: 320px;         /* cap sidebar width */
   }
 }
 
-/* 2) Inside the author card: force vertical stacking (no table-cells). */
-.sidebar .author__avatar,
-.sidebar .author__content,
-.sidebar .author__urls-wrapper {
-  display: block !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
+/* === Author avatar === */
+.author__avatar {
+  display: block !important;    /* stack vertically */
+  text-align: center;           /* center horizontally */
+  margin: 0 auto 1rem auto;     /* center + space below */
+  width: 100%;                  /* allow scaling within sidebar */
 }
 
-/* 3) Avatar spacing + shape + size (fits within the 300px sidebar). */
-.sidebar .author__avatar {
-  margin-bottom: 1rem !important;
+.author__avatar img {
+  max-width: 240px;             /* larger than default 175px */
+  height: auto;                 /* preserve aspect ratio */
+  border-radius: 50%;           /* circle (use 30% for oval) */
+  border: none;                 /* remove border */
+  object-fit: cover;            /* crop nicely */
+  display: block;
+  margin: 0 auto;
 }
 
-.sidebar .author__avatar img {
-  display: block !important;
-  margin: 0 auto !important;
-  max-width: 240px !important;  /* safe size inside 300px sidebar */
-  height: auto !important;
-
-  border: 0 !important;
-  border-radius: 50% !important;  /* circle; change to 30% for oval */
-  object-fit: cover !important;
-  object-position: top !important;
+/* === Author content === */
+.author__content {
+  display: block !important;    /* stack under avatar */
+  text-align: center;           /* center text under avatar */
+  padding: 0;                   /* reset side padding */
+  margin: 0 auto;
 }
 
-/* 4) Make sure author text never slips under the image. */
-.sidebar .author__content {
-  clear: both !important;
+/* Adjust author name, pronouns, bio */
+.author__name,
+.author__pronouns,
+.author__bio {
+  text-align: center;
+}
+
+/* Ensure main content respects wider sidebar */
+.page {
+  @include breakpoint($large) {
+    margin-left: 26%;   /* push main content right to clear sidebar */
+  }
 }
