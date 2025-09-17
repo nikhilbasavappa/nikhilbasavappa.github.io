@@ -1,34 +1,51 @@
-/* ===== Author avatar styling ===== */
-.author__avatar {
+/* ===========================
+   custom.scss (final)
+   - Fix avatar overlap
+   - Make sidebar wider
+   - Push main content over
+   =========================== */
+
+/* 1) Force vertical stacking in the author card */
+.author__avatar,
+.author__content,
+.author__urls-wrapper {
   display: block !important;
-  margin: 0 auto 1rem auto !important;  /* center in sidebar */
+  width: auto !important;
+}
+
+/* 2) Avatar: bigger, oval, no border */
+.author__avatar {
+  margin: 0 auto 1rem auto !important;   /* space under photo */
   text-align: center;
 }
 .author__avatar img {
   display: block;
-  max-width: 280px !important;   /* slightly smaller than before */
+  max-width: 260px !important;           /* <-- size knob (try 240–300) */
   width: 100% !important;
   height: auto !important;
-  border: none !important;
-  border-radius: 5%;            /* oval shape */
+  border: none !important;               /* remove theme ring */
+  padding: 0 !important;
+  border-radius: 40%;                    /* oval */
   object-fit: cover;
-  object-position: top;
-  margin: 10;                /* prevent drifting into text */
+  object-position: top;                  /* keep forehead in frame */
+  margin: 0 auto;
 }
 
-/* ===== Sidebar width ===== */
+/* 3) Desktop layout: give the sidebar a real width and offset the page */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    max-width: 360px;            /* realistic sidebar size */
-    padding: 1rem;               /* internal breathing room */
+    width: 320px !important;             /* <-- sidebar width knob */
+    max-width: none !important;          /* ignore theme cap */
   }
-}
 
-/* ===== Main content offset ===== */
-@media screen and (min-width: 1024px) {
   .page {
-    margin-left: 300px !important; /* 280px sidebar + ~20px gutter */
+    margin-left: 344px !important;       /* 320 + 24px gutter */
     width: auto;
     float: none !important;
   }
+}
+
+/* Mobile/tablet: no offset */
+@media screen and (max-width: 1023px) {
+  .page { margin-left: 0 !important; }
 }
