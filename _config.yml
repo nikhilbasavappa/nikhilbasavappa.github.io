@@ -18,7 +18,7 @@ repository    : "nikhilbasavappa/nikhilbasavappa.github.io"
 # Author (sidebar card)
 # =========================
 author:
-  avatar: "headshot_091625_cropped.png"  # place your headshot at /images/profile.png
+  avatar: "headshot_091625_cropped.jpeg"  # place your headshot at /images/profile.png
   name     : "Nikhil Basavappa"
   pronouns : "he/him"
   bio      : "PhD Candidate in Economics at Columbia University."
@@ -28,7 +28,7 @@ author:
   email    : "nikhil.b@columbia.edu"
 
 owner:
-  avatar: "headshot_091625_cropped.png"
+  avatar: "headshot_091625_cropped.jpeg"
 
   # Leave all academic/social fields blank so no icons render:
   googlescholar :
