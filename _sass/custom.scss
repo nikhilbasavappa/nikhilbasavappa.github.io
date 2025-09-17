@@ -1,20 +1,43 @@
-/* === Author avatar adjustments === */
-.author__avatar img {
-  max-width: 240px;       /* tweak size as needed */
-  height: auto;           /* keep natural aspect ratio */
-  border: none;           /* remove border */
-  border-radius: 30%;     /* oval instead of circle */
-  object-fit: cover;      /* fill shape nicely */
-  object-position: top;   /* keep top of head visible */
+/* ============================
+   Custom overrides for site
+   ============================ */
+
+/* === Author avatar === */
+.author__avatar {
+  max-width: 260px;      /* allow larger photo */
+  margin: 0 auto;        /* keep centered */
 }
 
-/* === Wider sidebar layout === */
+.author__avatar img {
+  width: 100%;           /* fill container */
+  height: auto;          /* keep natural proportions */
+  border-radius: 30%;    /* oval crop */
+  border: none;          /* remove border */
+  object-fit: cover;     /* avoid squishing */
+  object-position: top;  /* keep top of head in frame */
+}
+
+/* === Sidebar width === */
 .sidebar {
   @include breakpoint($large) {
-    @include span(3 of 12);   // Sidebar takes 3/12 of the grid instead of 2/12
+    @include span(3 of 12);   /* sidebar takes 3/12 instead of 2/12 */
   }
 
   @include breakpoint($x-large) {
-    max-width: 320px;         // cap width on very wide screens
+    max-width: 320px;         /* cap width so it doesn’t grow forever */
+  }
+}
+
+/* === Main page layout === */
+.page {
+  @include breakpoint($large) {
+    @include span(9 of 12 last);   /* content takes remaining 9/12 */
+  }
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 900px) {
+  .author__avatar {
+    max-width: 160px;  /* smaller avatar on narrow screens */
   }
 }
