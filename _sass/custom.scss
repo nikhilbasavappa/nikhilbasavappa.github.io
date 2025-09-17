@@ -1,43 +1,68 @@
-/* ============================
-   Custom overrides for site
-   ============================ */
+/* ================================
+   Custom Overrides for Site
+   ================================ */
+
+/* === Accent color (olive green) === */
+:root {
+  --accent: #556B2F;
+}
+
+a {
+  color: var(--accent);
+}
+a:hover {
+  text-decoration: underline;
+}
+.sidebar .author__urls li a {
+  color: var(--accent);
+}
 
 /* === Author avatar === */
 .author__avatar {
-  max-width: 260px;      /* allow larger photo */
-  margin: 0 auto;        /* keep centered */
+  max-width: 280px !important;   /* widen container */
+  margin: 0 auto 1rem auto;      /* center avatar in sidebar */
+  text-align: center;
 }
 
 .author__avatar img {
-  width: 100%;           /* fill container */
-  height: auto;          /* keep natural proportions */
-  border-radius: 30%;    /* oval crop */
-  border: none;          /* remove border */
-  object-fit: cover;     /* avoid squishing */
-  object-position: top;  /* keep top of head in frame */
+  max-width: 280px !important;   /* override theme default (175px) */
+  width: 100% !important;
+  height: auto;
+  border-radius: 30%;            /* oval crop */
+  border: none;                  /* remove border */
+  object-fit: cover;
+  object-position: top;          /* keep head visible */
 }
 
 /* === Sidebar width === */
 .sidebar {
   @include breakpoint($large) {
-    @include span(3 of 12);   /* sidebar takes 3/12 instead of 2/12 */
+    @include span(3 of 12);       /* sidebar = 3/12 instead of 2/12 */
   }
 
   @include breakpoint($x-large) {
-    max-width: 320px;         /* cap width so it doesn’t grow forever */
+    max-width: 320px;             /* cap width */
   }
 }
 
-/* === Main page layout === */
-.page {
-  @include breakpoint($large) {
-    @include span(9 of 12 last);   /* content takes remaining 9/12 */
-  }
+/* === Sidebar content alignment === */
+.author__content,
+.author__urls-wrapper {
+  text-align: center;
 }
 
-/* === Responsive adjustments === */
-@media (max-width: 900px) {
-  .author__avatar {
-    max-width: 160px;  /* smaller avatar on narrow screens */
-  }
+/* === Typography tweaks === */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6,
+.greedy-nav a, .greedy-nav .visible-links a {
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+  line-height: 1.3;
 }
