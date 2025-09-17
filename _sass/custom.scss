@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Custom sidebar + avatar tweaks
+   Custom sidebar + avatar fixes
    ========================================================================== */
 
 /* Sidebar width + page content alignment */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    width: 300px !important;      /* give more breathing room */
+    width: 300px !important;
   }
 
   .page {
@@ -14,26 +14,26 @@
   }
 }
 
-/* Avatar centered + larger */
+/* Avatar block — centered and isolated */
 .sidebar .author__avatar {
   display: block !important;
   text-align: center;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 1.5rem auto;   /* space under avatar */
 }
 
 .sidebar .author__avatar img {
-  width: 250px !important;        /* explicitly size image */
-  height: 250px !important;       /* square dimensions */
-  border-radius: 50%;             /* keep circular */
-  object-fit: cover;              /* crop edges if needed */
+  width: 250px !important;
+  height: 250px !important;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
   margin: 0 auto;
 }
 
-/* Sidebar text left-aligned */
+/* Push sidebar text BELOW the avatar */
 .sidebar .author__content {
   display: block !important;
   text-align: left;
-  margin-top: 1rem;
-  padding: 0 0.5rem;
+  margin-top: 1.5rem !important;  /* space between avatar and text */
+  clear: both;                    /* prevent overlap */
 }
