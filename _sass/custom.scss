@@ -1,8 +1,9 @@
-/* === Custom overrides === */
-
+/* === Author avatar adjustments === */
 .author__avatar img {
-  border-radius: 0 !important;   /* removes the circle */
-  max-width: 250px;              /* adjust width */
-  height: auto;                  /* keep proportions */
-  object-fit: cover;             /* crops gracefully if needed */
+  max-width: 180px;     /* tweak size as needed */
+  height: auto;         /* keep natural aspect ratio */
+  border: none;         /* remove border */
+  border-radius: 30%;   /* oval instead of circle */
+  object-fit: cover;    /* fill shape nicely */
+  object-position: top; /* keep top of head visible */
 }
