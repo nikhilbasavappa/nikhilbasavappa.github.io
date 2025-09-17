@@ -1,55 +1,50 @@
 /* =========================================
-   Minimal, surgical fixes (no theme edits)
+   Sidebar + avatar fixes
    ========================================= */
 
-/* 1) Sidebar width + push page so nothing overlaps */
+/* Make sidebar wider and push page content aside */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    width: 320px !important;         /* give the left column real width */
+    width: 320px !important;
     max-width: none !important;
   }
   .page {
-    margin-left: 344px !important;    /* 320 + ~24px gutter */
-    width: auto !important;
-    float: none !important;           /* avoid float collisions */
+    margin-left: 340px !important; /* 320 + 20px gutter */
   }
 }
 
-/* 2) Stack the author block vertically (kill table-cells) */
+/* Stack avatar above text (no table-cell layout) */
 .sidebar .author__avatar,
 .sidebar .author__content,
 .sidebar .author__urls-wrapper {
   display: block !important;
   width: 100% !important;
+  vertical-align: middle !important;
 }
 
-/* remove the left/right indent the theme applies to the content */
+/* Reset content padding so text doesn’t overlap */
 .sidebar .author__content {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  text-align: center !important; /* optional: center name/info */
 }
 
-/* 3) Avatar: large, oval, no border, keep head in frame */
+/* Avatar itself */
 .sidebar .author__avatar {
-  margin: 0 auto 1rem auto !important;  /* spacing under photo */
+  margin: 0 auto 1rem auto !important;
   text-align: center !important;
 }
 .sidebar .author__avatar img {
   display: block !important;
-  max-width: 260px !important;          /* <- size knob: 240–300px */
+  max-width: 260px !important;   /* adjust size */
   width: 100% !important;
   height: auto !important;
 
-  border: none !important;              /* remove ring the theme adds */
+  border: none !important;       /* remove border */
   padding: 0 !important;
 
-  border-radius: 28% !important;        /* oval crop */
+  border-radius: 50% / 35% !important; /* force oval */
   object-fit: cover !important;
-  object-position: top !important;      /* keep forehead visible */
+  object-position: top !important;
   margin: 0 auto !important;
-}
-
-/* 4) Mobile: let the layout collapse naturally (no offsets) */
-@media screen and (max-width: 1023px) {
-  .page { margin-left: 0 !important; }
 }
