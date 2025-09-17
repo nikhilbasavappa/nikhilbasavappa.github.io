@@ -6,20 +6,20 @@
 }
 .author__avatar img {
   display: block;
-  max-width: 220px !important;   /* slightly smaller than before */
+  max-width: 280px !important;   /* slightly smaller than before */
   width: 100% !important;
   height: auto !important;
   border: none !important;
-  border-radius: 28%;            /* oval shape */
+  border-radius: 5%;            /* oval shape */
   object-fit: cover;
   object-position: top;
-  margin: 0 auto;                /* prevent drifting into text */
+  margin: 10;                /* prevent drifting into text */
 }
 
 /* ===== Sidebar width ===== */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    max-width: 280px;            /* realistic sidebar size */
+    max-width: 360px;            /* realistic sidebar size */
     padding: 1rem;               /* internal breathing room */
   }
 }
