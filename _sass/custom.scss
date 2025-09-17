@@ -1,1 +1,43 @@
 
+/* ==========================================================================
+   Custom overrides for sidebar and avatar
+   ========================================================================== */
+
+/* === Sidebar width === */
+.sidebar {
+  @include breakpoint($large) {
+    @include span(3 of 12);   // widen sidebar to 3/12 columns (default was 2/12)
+  }
+
+  @include breakpoint($x-large) {
+    max-width: 320px;         // allow wider sidebar on very large screens
+    padding-right: 1rem;      // small padding to prevent crowding
+  }
+}
+
+/* === Main content offset ===
+   Push main content over so it never overlaps the wider sidebar. */
+.page {
+  @include breakpoint($large) {
+    margin-left: span(3 of 12);   // match new sidebar width
+  }
+}
+
+/* === Author avatar adjustments === */
+.author__avatar img {
+  max-width: 240px;           // larger than default 175px
+  height: auto;               // preserve aspect ratio
+  border-radius: 25%;         // oval instead of perfect circle
+  border: none;               // remove thin border
+  object-fit: cover;          // fill the shape nicely
+  object-position: top;       // keep head visible if cropped
+  display: block;             // avoid inline/text overlap
+  margin: 0 auto 1rem auto;   // center it and add spacing below
+}
+
+/* === Tidy up author content spacing === */
+.author__content {
+  padding-left: 0;    // remove awkward indent
+  padding-right: 0;
+  display: block;     // ensure it stacks neatly under avatar
+}
