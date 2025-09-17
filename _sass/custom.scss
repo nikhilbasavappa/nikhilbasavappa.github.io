@@ -1,52 +1,50 @@
-/* === Avatar === */
+/* ==========================================================================
+   Custom overrides for sidebar + avatar
+   ========================================================================== */
+
+/* --- Sidebar width and page content alignment --- */
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    width: 280px !important;      /* wider sidebar for large avatar */
+  }
+
+  .page {
+    margin-left: 300px !important;    /* push main content over */
+    max-width: calc(100% - 300px) !important;
+  }
+}
+
+/* --- Author avatar layout --- */
 .sidebar .author__avatar {
   display: block !important;
-  text-align: center;     /* only the avatar centered */
-  margin: 0 auto 1rem auto;
+  text-align: center;
+  margin: 0 auto 1rem auto;      /* center avatar, add spacing below */
 }
 
 .sidebar .author__avatar img {
-  max-width: 240px !important;  /* bigger face */
-  height: auto !important;      /* preserve aspect ratio */
-  border-radius: 50% !important;/* circle crop */
-  object-fit: cover !important;
-  object-position: center !important;
-  border: none !important;
-  padding: 0 !important;
+  max-width: 220px;              /* bigger image */
+  height: auto;                  /* keep natural ratio */
+  border-radius: 50%;            /* circular */
+  object-fit: cover;             /* crop edges if needed */
+  display: block;
+  margin: 0 auto;
 }
 
-/* === Sidebar text left-aligned === */
-.sidebar .author__content,
-.sidebar .author__name,
-.sidebar .author__bio,
-.sidebar .author__pronouns,
-.sidebar .author__urls,
-.sidebar p,
-.sidebar li {
-  text-align: left !important;
+/* --- Author content (name, pronouns, bio, links) --- */
+.sidebar .author__content {
+  display: block !important;
+  text-align: left;              /* keep text left aligned */
+  margin-top: 1rem;
+  padding: 0 0.5rem;              /* small breathing room */
 }
 
-/* === Fix sidebar vs main content overlap === */
-@media screen and (min-width: 1024px) {
-  .sidebar {
-    width: 280px !important;        /* make sidebar wider */
-    max-width: 280px !important;
-  }
-
-  .page {
-    margin-left: 300px !important;  /* push main content over */
-  }
+/* --- Optional: tighten sidebar text spacing --- */
+.sidebar .author__name {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
-/* === Mobile fallback === */
-@media screen and (max-width: 1023.98px) {
-  .sidebar {
-    width: auto !important;
-    max-width: none !important;
-    position: static !important;
-  }
-
-  .page {
-    margin-left: 0 !important;
-  }
+.sidebar .author__bio {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
