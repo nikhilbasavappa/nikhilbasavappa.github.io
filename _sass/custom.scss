@@ -1,50 +1,44 @@
 /* =========================================
-   Sidebar + avatar fixes
+   Sidebar + Avatar layout fixes
    ========================================= */
 
-/* Make sidebar wider and push page content aside */
+/* Force sidebar to be wide enough for a large avatar */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    width: 320px !important;
+    width: 300px !important;   /* widen sidebar */
     max-width: none !important;
   }
   .page {
-    margin-left: 340px !important; /* 320 + 20px gutter */
+    margin-left: 320px !important; /* push main content */
   }
 }
 
-/* Stack avatar above text (no table-cell layout) */
+/* Stack avatar ABOVE text — kill table-cell */
 .sidebar .author__avatar,
-.sidebar .author__content,
-.sidebar .author__urls-wrapper {
+.sidebar .author__content {
   display: block !important;
   width: 100% !important;
-  vertical-align: middle !important;
-}
-
-/* Reset content padding so text doesn’t overlap */
-.sidebar .author__content {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  text-align: center !important; /* optional: center name/info */
-}
-
-/* Avatar itself */
-.sidebar .author__avatar {
-  margin: 0 auto 1rem auto !important;
   text-align: center !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
 }
+
+/* Avatar container */
+.sidebar .author__avatar {
+  margin-bottom: 1rem !important;
+}
+
+/* Avatar image */
 .sidebar .author__avatar img {
   display: block !important;
-  max-width: 260px !important;   /* adjust size */
-  width: 100% !important;
+  margin: 0 auto !important;
+  max-width: 240px !important;   /* size you want */
   height: auto !important;
 
   border: none !important;       /* remove border */
   padding: 0 !important;
 
-  border-radius: 50% / 35% !important; /* force oval */
+  border-radius: 50% !important; /* clean circle (can adjust to oval if desired) */
   object-fit: cover !important;
   object-position: top !important;
-  margin: 0 auto !important;
 }
