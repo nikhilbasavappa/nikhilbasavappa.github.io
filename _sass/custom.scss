@@ -1,54 +1,55 @@
-/* ==========================================================================
-   Custom overrides for sidebar & avatar
-   ========================================================================== */
-
-/* Sidebar width tweaks */
-.sidebar {
-  @include breakpoint($large) {
-    @include span(3 of 12);   /* dedicate 3/12 of the grid to sidebar */
-  }
-
-  @include breakpoint($x-large) {
-    max-width: 320px;         /* cap sidebar width */
-  }
-}
-
-/* === Author avatar === */
-.author__avatar {
-  display: block !important;    /* stack vertically */
-  text-align: center;           /* center horizontally */
-  margin: 0 auto 1rem auto;     /* center + space below */
-  width: 100%;                  /* allow scaling within sidebar */
-}
-
-.author__avatar img {
-  max-width: 240px;             /* larger than default 175px */
-  height: auto;                 /* preserve aspect ratio */
-  border-radius: 50%;           /* circle (use 30% for oval) */
-  border: none;                 /* remove border */
-  object-fit: cover;            /* crop nicely */
-  display: block;
-  margin: 0 auto;
-}
-
-/* === Author content === */
-.author__content {
-  display: block !important;    /* stack under avatar */
-  text-align: center;           /* center text under avatar */
-  padding: 0;                   /* reset side padding */
-  margin: 0 auto;
-}
-
-/* Adjust author name, pronouns, bio */
-.author__name,
-.author__pronouns,
-.author__bio {
+/* === Sidebar: avatar centered, text left === */
+.sidebar .author__avatar {
+  display: block !important;
+  margin: 0 auto 0.75rem auto;  /* center avatar block, add gap below */
   text-align: center;
 }
 
-/* Ensure main content respects wider sidebar */
-.page {
-  @include breakpoint($large) {
-    margin-left: 26%;   /* push main content right to clear sidebar */
+.sidebar .author__avatar img {
+  display: block;
+  margin: 0 auto;              /* center image */
+  max-width: 240px;            /* tweak size if you want */
+  height: auto;
+  border-radius: 50%;          /* circle */
+  padding: 0;
+  border: 0;
+}
+
+/* Left-align all sidebar text blocks */
+.sidebar .author__content,
+.sidebar .author__name,
+.sidebar .author__bio,
+.sidebar .author__pronouns,
+.sidebar .author__urls,
+.sidebar p,
+.sidebar li,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5 {
+  text-align: left !important;
+}
+
+/* === Layout: ensure main content clears the fixed sidebar on large screens === */
+/* Adjust these two numbers together: sidebar width (W) and page margin-left (W + gutter) */
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    width: 300px !important;      /* W: visual width of sidebar */
+    max-width: 300px !important;
+  }
+
+  .page {
+    margin-left: 320px !important; /* W + ~20px gutter so text never touches */
+  }
+}
+
+/* On small screens, let everything stack naturally */
+@media screen and (max-width: 1023.98px) {
+  .sidebar {
+    width: auto !important;
+    max-width: none !important;
+    position: static !important;   /* follow normal flow when narrow */
+  }
+  .page {
+    margin-left: 0 !important;
   }
 }
