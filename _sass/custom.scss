@@ -1,51 +1,46 @@
-/* ===========================
-   custom.scss (final)
-   - Fix avatar overlap
-   - Make sidebar wider
-   - Push main content over
-   =========================== */
+/* ===============================
+   custom.scss (clean + working)
+   - Sidebar wider
+   - Avatar larger, oval, no overlap
+   =============================== */
 
-/* 1) Force vertical stacking in the author card */
-.author__avatar,
-.author__content,
-.author__urls-wrapper {
-  display: block !important;
-  width: auto !important;
-}
-
-/* 2) Avatar: bigger, oval, no border */
-.author__avatar {
-  margin: 0 auto 1rem auto !important;   /* space under photo */
-  text-align: center;
-}
-.author__avatar img {
-  display: block;
-  max-width: 260px !important;           /* <-- size knob (try 240–300) */
-  width: 100% !important;
-  height: auto !important;
-  border: none !important;               /* remove theme ring */
-  padding: 0 !important;
-  border-radius: 40%;                    /* oval */
-  object-fit: cover;
-  object-position: top;                  /* keep forehead in frame */
-  margin: 0 auto;
-}
-
-/* 3) Desktop layout: give the sidebar a real width and offset the page */
+/* Sidebar width & push page over */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    width: 320px !important;             /* <-- sidebar width knob */
-    max-width: none !important;          /* ignore theme cap */
+    width: 320px !important;      /* sidebar column */
   }
 
   .page {
-    margin-left: 344px !important;       /* 320 + 24px gutter */
-    width: auto;
-    float: none !important;
+    margin-left: 344px !important; /* 320 + ~24px gutter */
   }
 }
 
-/* Mobile/tablet: no offset */
-@media screen and (max-width: 1023px) {
-  .page { margin-left: 0 !important; }
+/* Reset author block layout */
+.author {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Avatar styling */
+.author__avatar {
+  margin-bottom: 1rem !important;
+}
+.author__avatar img {
+  max-width: 260px !important;   /* adjust size */
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 28%;            /* oval */
+  object-fit: cover;
+  object-position: top;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Author text styling */
+.author__content,
+.author__urls-wrapper {
+  text-align: center !important;
+  width: 100% !important;
 }
