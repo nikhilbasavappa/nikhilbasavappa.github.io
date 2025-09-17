@@ -1,42 +1,32 @@
-/* === Avatar styling === */
-.author__avatar {
-  display: block;         /* full block so text starts underneath */
-  text-align: center;     /* center the photo */
-  margin-bottom: 1rem;    /* spacing between avatar and text */
-}
+/* === Bigger sidebar + avatar === */
 
-.author__avatar img {
-  max-width: 220px;       /* control photo size */
-  width: 100%;
-  height: auto;
-  border-radius: 25%;     /* oval instead of circle */
-  border: none;           /* remove border */
-  object-fit: cover;      /* crop nicely */
-  object-position: top;   /* keep top of head visible */
-}
-
-/* === Sidebar adjustments === */
+/* Sidebar takes more grid space */
 .sidebar {
   @include breakpoint($large) {
-    @include span(3 of 12);   /* sidebar uses 3 columns instead of 2 */
+    @include span(3 of 12);   /* was 2/12, now 3/12 */
   }
 
   @include breakpoint($x-large) {
-    max-width: 320px;         /* wider cap for large screens */
+    max-width: 320px;         /* widen cap from ~250px to 320px */
   }
 }
 
-/* === Sidebar text cleanup === */
-.author__content,
-.author__urls-wrapper {
-  display: block;
-  text-align: left;
-  margin-top: 0.5rem;
+/* Avatar styling */
+.author__avatar img {
+  max-width: 260px !important;  /* bigger than theme default 175px */
+  width: 100% !important;
+  height: auto !important;
+
+  border: none !important;      /* remove gray border */
+  padding: 0 !important;
+
+  border-radius: 10%;           /* oval crop */
+  object-fit: cover;
+  object-position: top;         /* keep forehead in frame */
 }
 
-/* === Responsive: shrink avatar on mobile === */
-@media (max-width: 768px) {
-  .author__avatar img {
-    max-width: 150px;
-  }
+/* Spacing between avatar and text so they don't overlap */
+.author__avatar {
+  display: block !important;
+  margin: 0 auto 1rem auto !important;
 }
