@@ -1,46 +1,34 @@
-/* ===== Clean, stable overrides ===== */
-
-/* 1) Bigger avatar (no border), oval crop */
+/* ===== Author avatar styling ===== */
 .author__avatar {
   display: block !important;
-  margin: 0 0 1rem 0 !important; /* spacing below photo */
+  margin: 0 auto 1rem auto !important;  /* center in sidebar */
+  text-align: center;
 }
 .author__avatar img {
   display: block;
-  max-width: 260px !important;   /* <- make this bigger/smaller to taste */
+  max-width: 220px !important;   /* slightly smaller than before */
   width: 100% !important;
   height: auto !important;
-  border: none !important;        /* remove ring */
-  padding: 0 !important;
-  border-radius: 28%;             /* oval */
+  border: none !important;
+  border-radius: 28%;            /* oval shape */
   object-fit: cover;
-  object-position: top;           /* keep forehead in frame */
+  object-position: top;
+  margin: 0 auto;                /* prevent drifting into text */
 }
 
-/* 2) Sidebar width cap (pixel-based, no grid mixins) */
-.sidebar {
-  /* the theme already sets position: fixed on large screens */
-}
+/* ===== Sidebar width ===== */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    max-width: 320px;             /* visual width of the left column */
+    max-width: 280px;            /* realistic sidebar size */
+    padding: 1rem;               /* internal breathing room */
   }
 }
 
-/* 3) Push main content to the right so nothing overlaps the sidebar */
+/* ===== Main content offset ===== */
 @media screen and (min-width: 1024px) {
   .page {
-    margin-left: 340px !important;  /* 320px sidebar + ~20px gutter */
-    float: none !important;          /* avoid legacy float interactions */
-    width: auto;                     /* let it take the remaining space */
+    margin-left: 300px !important; /* 280px sidebar + ~20px gutter */
+    width: auto;
+    float: none !important;
   }
 }
-
-/* Optional: tighten the line-length a bit on very wide screens */
-/*
-@media screen and (min-width: 1400px) {
-  .page .page__content {
-    max-width: 900px;                // nicer measure for reading
-  }
-}
-*/
