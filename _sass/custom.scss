@@ -1,52 +1,42 @@
-/* ================================
-   Custom Overrides
-   ================================ */
-
-/* === Author avatar === */
+/* === Avatar styling === */
 .author__avatar {
-  display: block !important;
-  text-align: center;
-  margin: 0 auto 1rem auto;
+  display: block;         /* full block so text starts underneath */
+  text-align: center;     /* center the photo */
+  margin-bottom: 1rem;    /* spacing between avatar and text */
 }
 
 .author__avatar img {
-  width: 100% !important;
-  max-width: 260px !important;  /* bigger photo */
-  height: auto !important;
-  border-radius: 30%;           /* oval */
-  border: none !important;
-  object-fit: cover;
-  object-position: top;
+  max-width: 220px;       /* control photo size */
+  width: 100%;
+  height: auto;
+  border-radius: 25%;     /* oval instead of circle */
+  border: none;           /* remove border */
+  object-fit: cover;      /* crop nicely */
+  object-position: top;   /* keep top of head visible */
 }
 
-/* === Sidebar width === */
+/* === Sidebar adjustments === */
 .sidebar {
   @include breakpoint($large) {
-    @include span(3 of 12);   /* sidebar takes more space */
+    @include span(3 of 12);   /* sidebar uses 3 columns instead of 2 */
   }
 
   @include breakpoint($x-large) {
-    max-width: 300px;         /* cap width */
+    max-width: 320px;         /* wider cap for large screens */
   }
 }
 
-/* === Sidebar content === */
+/* === Sidebar text cleanup === */
 .author__content,
 .author__urls-wrapper {
-  text-align: left !important;  /* return to default alignment */
+  display: block;
+  text-align: left;
+  margin-top: 0.5rem;
 }
 
-/* === Accent color === */
-:root {
-  --accent: #556B2F;
-}
-
-a {
-  color: var(--accent);
-}
-a:hover {
-  text-decoration: underline;
-}
-.sidebar .author__urls li a {
-  color: var(--accent);
+/* === Responsive: shrink avatar on mobile === */
+@media (max-width: 768px) {
+  .author__avatar img {
+    max-width: 150px;
+  }
 }
