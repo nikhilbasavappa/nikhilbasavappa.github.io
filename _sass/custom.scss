@@ -6,7 +6,7 @@
 /* === Sidebar width === */
 .sidebar {
   @include breakpoint($large) {
-    @include span(3 of 12);   // widen sidebar to 3/12 columns (default was 2/12)
+    @include span(2 of 12);   // widen sidebar to 3/12 columns (default was 2/12)
   }
 
   @include breakpoint($x-large) {
