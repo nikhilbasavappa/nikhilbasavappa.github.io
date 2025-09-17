@@ -1,32 +1,45 @@
-/* ==========================================================================
-   Sidebar avatar + content stacking fix
-   ========================================================================== */
+/* === STACK-FIX: force the author block to stack and stop image auto-stretch === */
 
-/* Force avatar and text to stack */
-.sidebar .author__avatar,
-.sidebar .author__content {
-  display: block !important;
-  width: 100% !important;
+/* Make the person block a flex column so avatar sits on top, text below */
+.sidebar > [itemscope][itemtype="http://schema.org/Person"] {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;        /* avatar centered */
 }
 
-/* Avatar styling */
+/* Avatar wrapper spacing */
 .sidebar .author__avatar {
+  display: block !important;  /* kill table-cell */
+  width: 100% !important;
+  margin: 0 auto 1rem auto;   /* space below the photo */
   text-align: center;
-  margin: 0 auto 1.5rem auto;
 }
 
-.sidebar .author__avatar img {
-  width: 240px !important;
+/* The image itself: fixed size, circular, don’t let the sidebar's img{width:100%} win */
+.sidebar .author__avatar > img {
+  width: 240px !important;    /* tweak size here */
   height: 240px !important;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
+  padding: 0 !important;      /* override theme’s added padding */
+  border: 0 !important;       /* remove the ring */
   display: block;
   margin: 0 auto;
 }
 
-/* Sidebar text styling */
+/* Sidebar text block */
 .sidebar .author__content {
+  display: block !important;  /* kill table-cell */
+  width: 100% !important;
   text-align: left !important;
   margin-top: 0.5rem !important;
-  clear: both; /* ensures no overlap with avatar */
+}
+
+/* Ensure the main column leaves enough room for a wider sidebar */
+@media screen and (min-width: 1024px) {
+  .page {
+    /* Default is prefix(0.5 of 12) which was too tight; give the sidebar more room */
+    margin-left: 25% !important;   /* robust, avoids depending on Susy mixins order */
+  }
 }
