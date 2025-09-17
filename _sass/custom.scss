@@ -1,43 +1,55 @@
+/* =========================================
+   Minimal, surgical fixes (no theme edits)
+   ========================================= */
 
-/* ==========================================================================
-   Custom overrides for sidebar and avatar
-   ========================================================================== */
-
-/* === Sidebar width === */
-.sidebar {
-  @include breakpoint($large) {
-    @include span(2 of 12);   // widen sidebar to 3/12 columns (default was 2/12)
+/* 1) Sidebar width + push page so nothing overlaps */
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    width: 320px !important;         /* give the left column real width */
+    max-width: none !important;
   }
-
-  @include breakpoint($x-large) {
-    max-width: 320px;         // allow wider sidebar on very large screens
-    padding-right: 1rem;      // small padding to prevent crowding
-  }
-}
-
-/* === Main content offset ===
-   Push main content over so it never overlaps the wider sidebar. */
-.page {
-  @include breakpoint($large) {
-    margin-left: span(3 of 12);   // match new sidebar width
+  .page {
+    margin-left: 344px !important;    /* 320 + ~24px gutter */
+    width: auto !important;
+    float: none !important;           /* avoid float collisions */
   }
 }
 
-/* === Author avatar adjustments === */
-.author__avatar img {
-  max-width: 240px;           // larger than default 175px
-  height: auto;               // preserve aspect ratio
-  border-radius: 25%;         // oval instead of perfect circle
-  border: none;               // remove thin border
-  object-fit: cover;          // fill the shape nicely
-  object-position: top;       // keep head visible if cropped
-  display: block;             // avoid inline/text overlap
-  margin: 0 auto 1rem auto;   // center it and add spacing below
+/* 2) Stack the author block vertically (kill table-cells) */
+.sidebar .author__avatar,
+.sidebar .author__content,
+.sidebar .author__urls-wrapper {
+  display: block !important;
+  width: 100% !important;
 }
 
-/* === Tidy up author content spacing === */
-.author__content {
-  padding-left: 0;    // remove awkward indent
-  padding-right: 0;
-  display: block;     // ensure it stacks neatly under avatar
+/* remove the left/right indent the theme applies to the content */
+.sidebar .author__content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 3) Avatar: large, oval, no border, keep head in frame */
+.sidebar .author__avatar {
+  margin: 0 auto 1rem auto !important;  /* spacing under photo */
+  text-align: center !important;
+}
+.sidebar .author__avatar img {
+  display: block !important;
+  max-width: 260px !important;          /* <- size knob: 240–300px */
+  width: 100% !important;
+  height: auto !important;
+
+  border: none !important;              /* remove ring the theme adds */
+  padding: 0 !important;
+
+  border-radius: 28% !important;        /* oval crop */
+  object-fit: cover !important;
+  object-position: top !important;      /* keep forehead visible */
+  margin: 0 auto !important;
+}
+
+/* 4) Mobile: let the layout collapse naturally (no offsets) */
+@media screen and (max-width: 1023px) {
+  .page { margin-left: 0 !important; }
 }
