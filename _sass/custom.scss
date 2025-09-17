@@ -1,45 +1,48 @@
 /* ==========================================================================
-   Custom sidebar overrides
+   Custom sidebar + layout fixes
    ========================================================================== */
 
-/* Force vertical stacking */
+/* Main layout: sidebar + page side by side */
+#main {
+  display: flex !important;
+  align-items: flex-start;
+}
+
+/* Sidebar fixed column */
+.sidebar {
+  flex: 0 0 280px !important;  /* give sidebar a fixed width */
+  margin-right: 2rem !important;
+}
+
+/* Page content takes the rest */
+.page {
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
+}
+
+/* Stack avatar above text */
 .sidebar .author__avatar,
 .sidebar .author__content,
 .sidebar .author__urls-wrapper {
   display: block !important;
   width: 100% !important;
   text-align: center;
-  margin: 0 auto 1rem auto;  /* space below each block */
+  margin: 0 auto 1rem auto;
 }
 
-/* Avatar specifically */
+/* Avatar styling */
 .sidebar .author__avatar img {
-  width: 200px !important;       /* large but not overwhelming */
+  width: 200px !important;
   height: 200px !important;
-  border-radius: 50% !important; /* perfect circle */
-  object-fit: cover !important;  /* avoid stretching */
+  border-radius: 50% !important;
+  object-fit: cover !important;
   display: block;
-  margin: 0 auto 1rem auto;      /* center + spacing */
+  margin: 0 auto 1rem auto;
   border: 2px solid var(--global-border-color);
 }
 
-/* Sidebar text should be left-aligned inside its own block */
+/* Sidebar text alignment */
 .sidebar .author__content {
   text-align: left !important;
   padding: 0 0.5rem;
-}
-
-/* Sidebar layout vs main content */
-#main {
-  display: flex;
-  align-items: flex-start;
-}
-
-.sidebar {
-  flex: 0 0 280px;   /* fixed width sidebar */
-  margin-right: 2rem;
-}
-
-.page {
-  flex: 1;
 }
