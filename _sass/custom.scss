@@ -1,56 +1,45 @@
 /* ==========================================================================
-   Custom overrides
+   Custom sidebar overrides
    ========================================================================== */
 
-/* --- Avatar --- */
-.sidebar .author__avatar {
-  text-align: center !important;
-  margin-bottom: 1.5rem !important; /* space below avatar */
-}
-
-.sidebar .author__avatar img {
-  width: 240px !important;
-  height: 240px !important;
-  max-width: none !important;      /* remove the 175px cap */
-  border-radius: 50% !important;   /* circular crop */
-  object-fit: cover !important;    /* prevent distortion */
+/* Force vertical stacking */
+.sidebar .author__avatar,
+.sidebar .author__content,
+.sidebar .author__urls-wrapper {
   display: block !important;
-  margin: 0 auto !important;       /* center horizontally */
-  border: 2px solid var(--global-border-color) !important;
+  width: 100% !important;
+  text-align: center;
+  margin: 0 auto 1rem auto;  /* space below each block */
 }
 
-/* --- Sidebar text --- */
+/* Avatar specifically */
+.sidebar .author__avatar img {
+  width: 200px !important;       /* large but not overwhelming */
+  height: 200px !important;
+  border-radius: 50% !important; /* perfect circle */
+  object-fit: cover !important;  /* avoid stretching */
+  display: block;
+  margin: 0 auto 1rem auto;      /* center + spacing */
+  border: 2px solid var(--global-border-color);
+}
+
+/* Sidebar text should be left-aligned inside its own block */
 .sidebar .author__content {
   text-align: left !important;
-  padding: 0 1rem !important;
+  padding: 0 0.5rem;
 }
 
-.sidebar .author__name {
-  text-align: left !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
-/* --- Sidebar width + page layout --- */
-.sidebar {
-  @include span(3 of 12);          /* widen sidebar */
-}
-
-.page {
-  @include span(9 of 12 last);     /* shrink main content */
-}
-
-/* Ensure sidebar and page don’t collide */
+/* Sidebar layout vs main content */
 #main {
   display: flex;
-  flex-wrap: nowrap;
+  align-items: flex-start;
 }
 
 .sidebar {
-  flex: 0 0 25%;   /* sidebar ~25% width */
+  flex: 0 0 280px;   /* fixed width sidebar */
+  margin-right: 2rem;
 }
 
 .page {
-  flex: 1 0 70%;   /* main content ~70% width */
-  margin-left: 2rem; /* gap between sidebar + main */
+  flex: 1;
 }
