@@ -1,39 +1,32 @@
 /* ==========================================================================
-   Custom sidebar + avatar fixes
+   Sidebar avatar + content stacking fix
    ========================================================================== */
 
-/* Sidebar width + page content alignment */
-@media screen and (min-width: 1024px) {
-  .sidebar {
-    width: 300px !important;
-  }
-
-  .page {
-    margin-left: 320px !important;
-    max-width: calc(100% - 320px) !important;
-  }
+/* Force avatar and text to stack */
+.sidebar .author__avatar,
+.sidebar .author__content {
+  display: block !important;
+  width: 100% !important;
 }
 
-/* Avatar block — centered and isolated */
+/* Avatar styling */
 .sidebar .author__avatar {
-  display: block !important;
   text-align: center;
-  margin: 0 auto 1.5rem auto;   /* space under avatar */
+  margin: 0 auto 1.5rem auto;
 }
 
 .sidebar .author__avatar img {
-  width: 250px !important;
-  height: 250px !important;
+  width: 240px !important;
+  height: 240px !important;
   border-radius: 50%;
   object-fit: cover;
   display: block;
   margin: 0 auto;
 }
 
-/* Push sidebar text BELOW the avatar */
+/* Sidebar text styling */
 .sidebar .author__content {
-  display: block !important;
-  text-align: left;
-  margin-top: 1.5rem !important;  /* space between avatar and text */
-  clear: both;                    /* prevent overlap */
+  text-align: left !important;
+  margin-top: 0.5rem !important;
+  clear: both; /* ensures no overlap with avatar */
 }
