@@ -1,54 +1,51 @@
-/* === Avatar: circle, centered, no distortion === */
+/* === Avatar === */
 .sidebar .author__avatar {
   display: block !important;
-  margin: 0 auto 1rem auto; /* center avatar, add gap below */
-  text-align: center;
+  text-align: center;     /* only the avatar centered */
+  margin: 0 auto 1rem auto;
 }
 
 .sidebar .author__avatar img {
-  display: block;
-  margin: 0 auto;
-  max-width: 220px;       /* adjust to your taste */
-  height: auto;           /* preserve aspect ratio */
-  border-radius: 50%;     /* circle crop */
-  object-fit: cover;      /* fill circle without stretching */
-  object-position: center;/* keep face centered */
-  border: none;
-  padding: 0;
+  max-width: 240px !important;  /* bigger face */
+  height: auto !important;      /* preserve aspect ratio */
+  border-radius: 50% !important;/* circle crop */
+  object-fit: cover !important;
+  object-position: center !important;
+  border: none !important;
+  padding: 0 !important;
 }
 
-/* === Sidebar text: left aligned === */
+/* === Sidebar text left-aligned === */
 .sidebar .author__content,
 .sidebar .author__name,
 .sidebar .author__bio,
 .sidebar .author__pronouns,
 .sidebar .author__urls,
 .sidebar p,
-.sidebar li,
-.sidebar h3,
-.sidebar h4,
-.sidebar h5 {
+.sidebar li {
   text-align: left !important;
 }
 
-/* === Layout: fix overlap with main content === */
+/* === Fix sidebar vs main content overlap === */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    width: 300px !important;      /* reserve sidebar width */
-    max-width: 300px !important;
+    width: 280px !important;        /* make sidebar wider */
+    max-width: 280px !important;
   }
 
   .page {
-    margin-left: 320px !important; /* sidebar width + gutter */
+    margin-left: 300px !important;  /* push main content over */
   }
 }
 
+/* === Mobile fallback === */
 @media screen and (max-width: 1023.98px) {
   .sidebar {
     width: auto !important;
     max-width: none !important;
-    position: static !important; /* normal flow */
+    position: static !important;
   }
+
   .page {
     margin-left: 0 !important;
   }
