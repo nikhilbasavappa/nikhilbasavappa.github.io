@@ -1,6 +1,5 @@
-# Only the main Sass file needs front matter so Jekyll will process imports
 ---
-
+---
 @import
     "vendor/breakpoint/breakpoint",
 
@@ -34,5 +33,5 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands",
 
-    "custom"   /* <-- this pulls in _sass/custom.scss */
+    "custom"   // this is the last one
 ;
