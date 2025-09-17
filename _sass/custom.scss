@@ -1,32 +1,46 @@
-/* === Bigger sidebar + avatar === */
+/* ===== Clean, stable overrides ===== */
 
-/* Sidebar takes more grid space */
-.sidebar {
-  @include breakpoint($large) {
-    @include span(3 of 12);   /* was 2/12, now 3/12 */
-  }
-
-  @include breakpoint($x-large) {
-    max-width: 320px;         /* widen cap from ~250px to 320px */
-  }
-}
-
-/* Avatar styling */
-.author__avatar img {
-  max-width: 260px !important;  /* bigger than theme default 175px */
-  width: 100% !important;
-  height: auto !important;
-
-  border: none !important;      /* remove gray border */
-  padding: 0 !important;
-
-  border-radius: 10%;           /* oval crop */
-  object-fit: cover;
-  object-position: top;         /* keep forehead in frame */
-}
-
-/* Spacing between avatar and text so they don't overlap */
+/* 1) Bigger avatar (no border), oval crop */
 .author__avatar {
   display: block !important;
-  margin: 0 auto 1rem auto !important;
+  margin: 0 0 1rem 0 !important; /* spacing below photo */
 }
+.author__avatar img {
+  display: block;
+  max-width: 260px !important;   /* <- make this bigger/smaller to taste */
+  width: 100% !important;
+  height: auto !important;
+  border: none !important;        /* remove ring */
+  padding: 0 !important;
+  border-radius: 28%;             /* oval */
+  object-fit: cover;
+  object-position: top;           /* keep forehead in frame */
+}
+
+/* 2) Sidebar width cap (pixel-based, no grid mixins) */
+.sidebar {
+  /* the theme already sets position: fixed on large screens */
+}
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    max-width: 320px;             /* visual width of the left column */
+  }
+}
+
+/* 3) Push main content to the right so nothing overlaps the sidebar */
+@media screen and (min-width: 1024px) {
+  .page {
+    margin-left: 340px !important;  /* 320px sidebar + ~20px gutter */
+    float: none !important;          /* avoid legacy float interactions */
+    width: auto;                     /* let it take the remaining space */
+  }
+}
+
+/* Optional: tighten the line-length a bit on very wide screens */
+/*
+@media screen and (min-width: 1400px) {
+  .page .page__content {
+    max-width: 900px;                // nicer measure for reading
+  }
+}
+*/
