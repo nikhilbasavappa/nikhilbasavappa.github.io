@@ -1,0 +1,8 @@
+/* === Custom overrides === */
+
+.author__avatar img {
+  border-radius: 0 !important;   /* removes the circle */
+  max-width: 250px;              /* adjust width */
+  height: auto;                  /* keep proportions */
+  object-fit: cover;             /* crops gracefully if needed */
+}
