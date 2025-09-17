@@ -1,45 +1,56 @@
-/* === STACK-FIX: force the author block to stack and stop image auto-stretch === */
+/* ==========================================================================
+   Custom overrides
+   ========================================================================== */
 
-/* Make the person block a flex column so avatar sits on top, text below */
-.sidebar > [itemscope][itemtype="http://schema.org/Person"] {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;        /* avatar centered */
-}
-
-/* Avatar wrapper spacing */
+/* --- Avatar --- */
 .sidebar .author__avatar {
-  display: block !important;  /* kill table-cell */
-  width: 100% !important;
-  margin: 0 auto 1rem auto;   /* space below the photo */
-  text-align: center;
+  text-align: center !important;
+  margin-bottom: 1.5rem !important; /* space below avatar */
 }
 
-/* The image itself: fixed size, circular, don’t let the sidebar's img{width:100%} win */
-.sidebar .author__avatar > img {
-  width: 240px !important;    /* tweak size here */
+.sidebar .author__avatar img {
+  width: 240px !important;
   height: 240px !important;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  padding: 0 !important;      /* override theme’s added padding */
-  border: 0 !important;       /* remove the ring */
-  display: block;
-  margin: 0 auto;
+  max-width: none !important;      /* remove the 175px cap */
+  border-radius: 50% !important;   /* circular crop */
+  object-fit: cover !important;    /* prevent distortion */
+  display: block !important;
+  margin: 0 auto !important;       /* center horizontally */
+  border: 2px solid var(--global-border-color) !important;
 }
 
-/* Sidebar text block */
+/* --- Sidebar text --- */
 .sidebar .author__content {
-  display: block !important;  /* kill table-cell */
-  width: 100% !important;
+  text-align: left !important;
+  padding: 0 1rem !important;
+}
+
+.sidebar .author__name {
   text-align: left !important;
   margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
-/* Ensure the main column leaves enough room for a wider sidebar */
-@media screen and (min-width: 1024px) {
-  .page {
-    /* Default is prefix(0.5 of 12) which was too tight; give the sidebar more room */
-    margin-left: 25% !important;   /* robust, avoids depending on Susy mixins order */
-  }
+/* --- Sidebar width + page layout --- */
+.sidebar {
+  @include span(3 of 12);          /* widen sidebar */
+}
+
+.page {
+  @include span(9 of 12 last);     /* shrink main content */
+}
+
+/* Ensure sidebar and page don’t collide */
+#main {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.sidebar {
+  flex: 0 0 25%;   /* sidebar ~25% width */
+}
+
+.page {
+  flex: 1 0 70%;   /* main content ~70% width */
+  margin-left: 2rem; /* gap between sidebar + main */
 }
