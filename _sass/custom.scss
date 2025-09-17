@@ -1,11 +1,11 @@
 /* === Author avatar adjustments === */
 .author__avatar img {
-  max-width: 240px;     /* tweak size as needed */
-  height: auto;         /* keep natural aspect ratio */
-  border: none;         /* remove border */
-  border-radius: 30%;   /* oval instead of circle */
-  object-fit: cover;    /* fill shape nicely */
-  object-position: top; /* keep top of head visible */
+  max-width: 240px;       /* tweak size as needed */
+  height: auto;           /* keep natural aspect ratio */
+  border: none;           /* remove border */
+  border-radius: 30%;     /* oval instead of circle */
+  object-fit: cover;      /* fill shape nicely */
+  object-position: top;   /* keep top of head visible */
 }
 
 /* === Wider sidebar layout === */
@@ -17,11 +17,4 @@
   @include breakpoint($x-large) {
     max-width: 320px;         // cap width on very wide screens
   }
-}
-
-.author__avatar img {
-  max-width: 240px;           // adjust to your liking (was 175px by default)
-  height: auto;
-  border-radius: 20%;         // keeps oval look
-  border: none;               // removes border if not already gone
 }
