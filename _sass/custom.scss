@@ -7,3 +7,21 @@
   object-fit: cover;    /* fill shape nicely */
   object-position: top; /* keep top of head visible */
 }
+
+/* === Wider sidebar layout === */
+.sidebar {
+  @include breakpoint($large) {
+    @include span(3 of 12);   // Sidebar takes 3/12 of the grid instead of 2/12
+  }
+
+  @include breakpoint($x-large) {
+    max-width: 320px;         // cap width on very wide screens
+  }
+}
+
+.author__avatar img {
+  max-width: 240px;           // adjust to your liking (was 175px by default)
+  height: auto;
+  border-radius: 20%;         // keeps oval look
+  border: none;               // removes border if not already gone
+}
