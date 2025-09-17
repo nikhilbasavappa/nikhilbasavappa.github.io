@@ -1,50 +1,39 @@
 /* ==========================================================================
-   Custom overrides for sidebar + avatar
+   Custom sidebar + avatar tweaks
    ========================================================================== */
 
-/* --- Sidebar width and page content alignment --- */
+/* Sidebar width + page content alignment */
 @media screen and (min-width: 1024px) {
   .sidebar {
-    width: 280px !important;      /* wider sidebar for large avatar */
+    width: 300px !important;      /* give more breathing room */
   }
 
   .page {
-    margin-left: 300px !important;    /* push main content over */
-    max-width: calc(100% - 300px) !important;
+    margin-left: 320px !important;
+    max-width: calc(100% - 320px) !important;
   }
 }
 
-/* --- Author avatar layout --- */
+/* Avatar centered + larger */
 .sidebar .author__avatar {
   display: block !important;
   text-align: center;
-  margin: 0 auto 1rem auto;      /* center avatar, add spacing below */
+  margin: 0 auto 1.5rem auto;
 }
 
 .sidebar .author__avatar img {
-  max-width: 220px;              /* bigger image */
-  height: auto;                  /* keep natural ratio */
-  border-radius: 50%;            /* circular */
-  object-fit: cover;             /* crop edges if needed */
+  width: 250px !important;        /* explicitly size image */
+  height: 250px !important;       /* square dimensions */
+  border-radius: 50%;             /* keep circular */
+  object-fit: cover;              /* crop edges if needed */
   display: block;
   margin: 0 auto;
 }
 
-/* --- Author content (name, pronouns, bio, links) --- */
+/* Sidebar text left-aligned */
 .sidebar .author__content {
   display: block !important;
-  text-align: left;              /* keep text left aligned */
+  text-align: left;
   margin-top: 1rem;
-  padding: 0 0.5rem;              /* small breathing room */
-}
-
-/* --- Optional: tighten sidebar text spacing --- */
-.sidebar .author__name {
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.sidebar .author__bio {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
