@@ -1,8 +1,42 @@
 /* ================================
-   Custom Overrides for Site
+   Custom Overrides
    ================================ */
 
-/* === Accent color (olive green) === */
+/* === Author avatar === */
+.author__avatar {
+  display: block !important;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+}
+
+.author__avatar img {
+  width: 100% !important;
+  max-width: 260px !important;  /* bigger photo */
+  height: auto !important;
+  border-radius: 30%;           /* oval */
+  border: none !important;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* === Sidebar width === */
+.sidebar {
+  @include breakpoint($large) {
+    @include span(3 of 12);   /* sidebar takes more space */
+  }
+
+  @include breakpoint($x-large) {
+    max-width: 300px;         /* cap width */
+  }
+}
+
+/* === Sidebar content === */
+.author__content,
+.author__urls-wrapper {
+  text-align: left !important;  /* return to default alignment */
+}
+
+/* === Accent color === */
 :root {
   --accent: #556B2F;
 }
@@ -15,54 +49,4 @@ a:hover {
 }
 .sidebar .author__urls li a {
   color: var(--accent);
-}
-
-/* === Author avatar === */
-.author__avatar {
-  max-width: 280px !important;   /* widen container */
-  margin: 0 auto 1rem auto;      /* center avatar in sidebar */
-  text-align: center;
-}
-
-.author__avatar img {
-  max-width: 280px !important;   /* override theme default (175px) */
-  width: 100% !important;
-  height: auto;
-  border-radius: 30%;            /* oval crop */
-  border: none;                  /* remove border */
-  object-fit: cover;
-  object-position: top;          /* keep head visible */
-}
-
-/* === Sidebar width === */
-.sidebar {
-  @include breakpoint($large) {
-    @include span(3 of 12);       /* sidebar = 3/12 instead of 2/12 */
-  }
-
-  @include breakpoint($x-large) {
-    max-width: 320px;             /* cap width */
-  }
-}
-
-/* === Sidebar content alignment === */
-.author__content,
-.author__urls-wrapper {
-  text-align: center;
-}
-
-/* === Typography tweaks === */
-body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
-  color: #222;
-}
-
-h1, h2, h3, h4, h5, h6,
-.greedy-nav a, .greedy-nav .visible-links a {
-  font-family: Merriweather, Georgia, serif;
-  font-weight: 700;
-  letter-spacing: .2px;
-  line-height: 1.3;
 }
