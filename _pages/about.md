@@ -15,17 +15,25 @@ In my free time, I enjoy bouldering, cooking, and going to museums. I'm a freque
 
 **References:**
 
-- [Jack Willis](https://sites.google.com/view/jwillis/)  
-  Assistant Professor of Economics  
-  Columbia University  
-  [jw3634@columbia.edu](mailto:jw3634@columbia.edu)
-
-- [Michael Best](https://michaelcbest.github.io/)  
-  Associate Professor of Economics  
-  Columbia University  
-  [mcb2270@columbia.edu](mailto:mcb2270@columbia.edu)
-
-- [Suresh Naidu](https://www.columbia.edu/~sn2430/)  
-  Professor of Economics and International Affairs  
-  Columbia University  
-  [sn2430@columbia.edu](mailto:sn2430@columbia.edu)
+<table>
+  <tr>
+    <td>
+      <a href="https://sites.google.com/view/jwillis/">Jack Willis</a><br/>
+      <em>Assistant Professor of Economics</em><br/>
+      Columbia University<br/>
+      <a href="mailto:jw3634@columbia.edu">jw3634@columbia.edu</a>
+    </td>
+    <td>
+      <a href="https://michaelcbest.github.io/">Michael Best</a><br/>
+      <em>Associate Professor of Economics</em><br/>
+      Columbia University<br/>
+      <a href="mailto:mcb2270@columbia.edu">mcb2270@columbia.edu</a>
+    </td>
+    <td>
+      <a href="https://www.columbia.edu/~sn2430/">Suresh Naidu</a><br/>
+      <em>Professor of Economics and International Affairs</em><br/>
+      Columbia University<br/>
+      <a href="mailto:sn2430@columbia.edu">sn2430@columbia.edu</a>
+    </td>
+  </tr>
+</table>
