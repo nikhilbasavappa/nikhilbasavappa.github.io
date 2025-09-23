@@ -20,7 +20,7 @@ repository    : "nikhilbasavappa/nikhilbasavappa.github.io"
 author:
   avatar: "headshot_091625_cropped.jpeg"  # place your headshot at /images/profile.png
   name     : "Nikhil Basavappa"
-  pronouns : "he/him"
+  pronouns : 
   bio      : "PhD Candidate in Economics at Columbia University."
   location : "New York, NY"
   employer : "Columbia University"
