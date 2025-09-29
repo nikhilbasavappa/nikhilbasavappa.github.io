@@ -18,7 +18,7 @@ Draft coming soon.
 
 **Mobility, Information, and Climate Resilience: Evidence from India’s Rural Poor**  
 with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
-Presented at [NetMob Conference, World Bank (2024)](https://netmob.org/www24/)
+Presented at [NetMob Conference, World Bank (2024)](https://netmob.org/www24/)  
 [Extended Abstract](/files/netmob_extended_abstract.pdf)
 
 > Agricultural communities in India are substantially vulnerable to weather shocks. Information on how to bear those shocks spreads slowly through potentially sparse and distant social networks. Using cellphone mobility and farmer help-line call data, we characterize farmer mobility during the planting season, identify isolated areas, and show how mobility interacts with information seeking in the face of adverse weather.
@@ -26,7 +26,7 @@ Presented at [NetMob Conference, World Bank (2024)](https://netmob.org/www24/)
 ---
 
 **Information Provision and Agricultural Productivity**  
-with [Ricardo Pommer Muñoz](https://pommermunoz.io/)
+with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
 [Slides](/files/kcc_slides.pdf)
 
 > Information extension services are common in the developing world, but often “push” information regardless of demand. We study how information provision through a large agricultural call center in India — a “pull” service — affects agricultural productivity. Leveraging a shock to access from the consolidation of the call center to one phone number and variation in tower coverage, we find the call center led farmers to sow less land overall but produce more per unit area.
