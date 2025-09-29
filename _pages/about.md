@@ -13,6 +13,9 @@ Prior to joining Columbia, I worked at MIT as a research support associate. In 2
 
 In my free time, I enjoy bouldering, cooking, and going to museums. I'm a frequent visitor of the Morningside Farmer's Market. From 2017–2021, I spent most of my free time learning automotive repair and restoration.
 
+[Download my CV (PDF)](/files/cv/basavappa_CV_2025.pdf)
+){:target="_blank"}
+
 **References:**
 <table style="border-collapse: collapse; border: none; width: 100%;">
   <tr>
