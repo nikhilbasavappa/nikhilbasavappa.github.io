@@ -9,7 +9,7 @@ author_profile: true
 
 **Climate Maladaptation and the Commons: Groundwater Management in India**  
 with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
-Upcoming at [APPAM Fall Research Conference (2025)](https://www.appam.org/events/2025-appam-annual-fall-research-conference/)
+Upcoming at [APPAM Fall Research Conference (2025)](https://www.appam.org/events/2025-appam-annual-fall-research-conference/).
 Draft coming soon.
 
 ---
