@@ -14,7 +14,7 @@ Draft coming soon.
 
 ---
 
-## Working Papers
+## Working in Progress
 
 **Mobility, Information, and Climate Resilience: Evidence from India’s Rural Poor**  
 with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
@@ -37,8 +37,6 @@ with [Raissa Fabregas](https://sites.google.com/view/raissafabregas) and [Jack W
 > Smallholder farmers vary substantially in agricultural know-how, even within the same village. Do farmers value others’ information and, if so, what prevents its diffusion? We measure knowledge of, and willingness-to-pay for, such information, and test interventions to encourage diffusion and identify the corresponding frictions.
 
 ---
-
-## Work in Progress
 
 **Natural Disasters and the Deployment of Public Labor**  
 with [Hannah Farkas](https://hannahfarkas.github.io/) and [Ricardo Pommer Muñoz](https://pommermunoz.io/)
