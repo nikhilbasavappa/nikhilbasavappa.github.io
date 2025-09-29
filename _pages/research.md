@@ -14,7 +14,7 @@ Draft coming soon.
 
 ---
 
-## Working in Progress
+## Work in Progress
 
 **Mobility, Information, and Climate Resilience: Evidence from India’s Rural Poor**  
 with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
