@@ -16,12 +16,23 @@ Draft coming soon.
 
 ## Work in Progress
 
-**Mobility, Information, and Climate Resilience: Evidence from India’s Rural Poor**  
+**Mobility, Climate Shocks, and Demand for Information: Evidence from India**  
 with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
 Presented at [NetMob Conference, World Bank (2024)](https://netmob.org/www24/)  
 [Extended Abstract](/files/netmob_extended_abstract.pdf)
 
-> Agricultural communities in India are substantially vulnerable to weather shocks. Information on how to bear those shocks spreads slowly through potentially sparse and distant social networks. Using cellphone mobility and farmer help-line call data, we characterize farmer mobility during the planting season, identify isolated areas, and show how mobility interacts with information seeking in the face of adverse weather.
+> Weather shocks pose severe risks to agricultural communities in India. Information
+on how to mitigate their effects, however, can be difficult to access, as it spreads slowly
+through potentially sparse and distant social networks. Using novel cellphone mobility
+data merged with over 1.5 million calls to India’s national agricultural helpline, we doc-
+ument three patterns. First, mobility in rural India is severely constrained: over 75%
+of areas exhibit primarily local travel. Second, we examine how mobility and helpline
+calls correlate with climate shocks—heatwaves and extended droughts. While mobil-
+ity increases during heatwaves, helpline calls decline. Third, this relationship varies
+systematically with baseline mobility levels: the negative association between climate
+shocks and calls is significantly weaker in low-mobility areas across multiple measures of
+geographic isolation. The heterogeneity is specific to agricultural information requests
+and concentrated during crop growing seasons.
 
 ---
 
