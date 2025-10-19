@@ -165,8 +165,8 @@ select:focus {
 
 .author__avatar img,
 .sidebar .author__avatar img {
-  width: 180px !important;   /* match container */
-  height: 180px !important;
+  width: 160px !important;   /* match container */
+  height: 160px !important;
   object-fit: cover !important;  /* crop evenly, no squish */
   border-radius: 50% !important; /* perfect circle */
   display: block;               /* avoid inline gaps */
