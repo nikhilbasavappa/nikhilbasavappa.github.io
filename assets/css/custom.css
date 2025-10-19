@@ -155,3 +155,19 @@ select:focus {
     border-color: #3498db !important;
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
 }
+
+/* Fix avatar shape/size */
+.author__avatar,
+.sidebar .author__avatar {
+  width: 180px !important;   /* keep container square */
+  height: 180px !important;
+}
+
+.author__avatar img,
+.sidebar .author__avatar img {
+  width: 180px !important;   /* match container */
+  height: 180px !important;
+  object-fit: cover !important;  /* crop evenly, no squish */
+  border-radius: 50% !important; /* perfect circle */
+  display: block;               /* avoid inline gaps */
+}
