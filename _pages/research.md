@@ -8,37 +8,39 @@ author_profile: true
 ## Job Market Paper
 
 **Climate Maladaptation and the Commons: Groundwater Management in India**  
-with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
-Upcoming at [APPAM Fall Research Conference (2025)](https://www.appam.org/events/2025-appam-annual-fall-research-conference/).
-Draft coming soon.
+with [Ricardo Pommer Muñoz](https://pommermunoz.io/)<br>
+Upcoming at [APPAM Fall Research Conference (2025)](https://www.appam.org/events/2025-appam-annual-fall-research-conference/).<br>
+*Funded by:* Columbia University — Program for Economic Research (PER)<br>
+*Draft coming soon*
 
 ---
 
 ## Work in Progress
 
 **Mobility, Climate Shocks, and Demand for Information: Evidence from India**  
-with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
-Presented at [NetMob Conference, World Bank (2024)](https://netmob.org/www24/)  
+with [Ricardo Pommer Muñoz](https://pommermunoz.io/)<br>
+Presented at [NetMob Conference, World Bank (2024)](https://netmob.org/www24/)<br>
 [Extended Abstract](/files/netmob_extended_abstract.pdf)
 
 > Weather shocks pose severe risks to agricultural communities in India. Information
-on how to mitigate their effects, however, can be difficult to access, as it spreads slowly
-through potentially sparse and distant social networks. Using novel cellphone mobility
-data merged with over 1.5 million calls to India’s national agricultural helpline, we doc-
-ument three patterns. First, mobility in rural India is severely constrained: over 75%
-of areas exhibit primarily local travel. Second, we examine how mobility and helpline
-calls correlate with climate shocks—heatwaves and extended droughts. While mobil-
-ity increases during heatwaves, helpline calls decline. Third, this relationship varies
-systematically with baseline mobility levels: the negative association between climate
-shocks and calls is significantly weaker in low-mobility areas across multiple measures of
-geographic isolation. The heterogeneity is specific to agricultural information requests
-and concentrated during crop growing seasons.
+> on how to mitigate their effects, however, can be difficult to access, as it spreads slowly
+> through potentially sparse and distant social networks. Using novel cellphone mobility
+> data merged with over 1.5 million calls to India’s national agricultural helpline, we doc-
+> ument three patterns. First, mobility in rural India is severely constrained: over 75%
+> of areas exhibit primarily local travel. Second, we examine how mobility and helpline
+> calls correlate with climate shocks—heatwaves and extended droughts. While mobil-
+> ity increases during heatwaves, helpline calls decline. Third, this relationship varies
+> systematically with baseline mobility levels: the negative association between climate
+> shocks and calls is significantly weaker in low-mobility areas across multiple measures of
+> geographic isolation. The heterogeneity is specific to agricultural information requests
+> and concentrated during crop growing seasons.
 
 ---
 
 **Information Provision and Agricultural Productivity**  
-with [Ricardo Pommer Muñoz](https://pommermunoz.io/)  
-[Slides](/files/kcc_slides.pdf)
+with [Ricardo Pommer Muñoz](https://pommermunoz.io/)<br>
+[Slides](/files/kcc_slides.pdf)<br>
+*Funded by:* Columbia University — Program for Economic Research (PER); Center for Development Economics and Policy (CDEP)
 
 > Information extension services are common in the developing world, but often “push” information regardless of demand. We study how information provision through a large agricultural call center in India — a “pull” service — affects agricultural productivity. Leveraging a shock to access from the consolidation of the call center to one phone number and variation in tower coverage, we find the call center led farmers to sow less land overall but produce more per unit area.
 
