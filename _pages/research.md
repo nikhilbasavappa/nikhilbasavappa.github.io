@@ -7,11 +7,13 @@ author_profile: true
 
 ## Job Market Paper
 
-**Climate Maladaptation and the Commons: Groundwater Management in India**  
+[**Climate Maladaptation and the Commons: Groundwater Management in India**](/files/nbrpm_gw_draft_public.pdf)  
 with [Ricardo Pommer Muñoz](https://pommermunoz.io/)<br>
 Upcoming at [APPAM Fall Research Conference (2025)](https://www.appam.org/events/2025-appam-annual-fall-research-conference/).<br>
 Funded by the Columbia University Program for Economic Research (PER)<br>
-*Draft coming soon*
+
+> India is the world’s largest groundwater user, with 90% used for agriculture. Groundwater, however, is a common pool resource, generating a tragedy of the commons that threatens agricultural sustainability. We develop a parsimonious model to show how a popular policy intervention — subsidizing efficient irrigation technology — can exacerbate distortions away from socially optimal groundwater extraction. We test the model's predictions by leveraging geophysical variation in extraction externalities and a \$1.35 billion program subsidizing efficient irrigation. Consistent with the model's predictions, the policy's impact depends on the severity of extraction externalities: extraction falls 9.2% in low-externality areas but rises 11.0% in high-externality areas. Low-externality farmers maintain cultivation using less groundwater, while high-externality farmers cultivate more intensively. Finally, the program causes climate-adaptive responses in low-externality areas—reducing extraction during normal rainfall and increasing it during droughts—but the opposite pattern in high-externality areas, consistent with climate maladaptation. Our findings illustrate that the same common pool conditions that typically justify an intervention may also determine its welfare implications.
+
 
 ---
 
