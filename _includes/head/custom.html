@@ -64,10 +64,19 @@ a, p, span, div,
 }
 </style>
 
-<!-- Support for Academicons -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<!-- end custom head snippets -->
+<style>
+/* Make dropdown text in mobile nav olive green */
+@media screen and (max-width: 768px) {
+  .masthead #site-nav.greedy-nav .hidden-links a,
+  .masthead #site-nav.greedy-nav .hidden-links a:visited {
+    color: #556b2f !important;   /* olive green for mobile dropdown text */
+  }
+  .masthead #site-nav.greedy-nav .hidden-links a:hover {
+    color: #6b8e23 !important;   /* lighter olive on hover */
+  }
+}
+</style>
 
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
