@@ -1,189 +1,218 @@
-/* Custom styling for Nikhil's Academic Website */
+/* ============================================================
+   Custom styling for Nikhil's Academic Website
+   ============================================================ */
 
-/* Navigation/Header Colors */
+/* ============================
+   Navigation/Header Colors
+   ============================ */
 .masthead {
-    background-color: #34495e !important;
+  background-color: #34495e !important;
 }
 
 .masthead .site-title,
 .masthead .site-subtitle {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
-.greedy-nav a {
-    color: #ffffff !important;
+/* Top-level (visible) links stay white on desktop */
+.greedy-nav .visible-links > li > a {
+  color: #ffffff !important;
+}
+.greedy-nav .visible-links > li > a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.greedy-nav a:hover {
-    color: rgba(255, 255, 255, 0.8) !important;
+/* Dropdown (hidden) links – used on mobile & overflow menu */
+.greedy-nav .hidden-links a,
+.greedy-nav .hidden-links a:visited,
+.greedy-nav .dropdown a,
+.greedy-nav__dropdown a {
+  color: #2c3e50 !important;   /* dark text so it shows on the light panel */
+}
+.greedy-nav .hidden-links a:hover,
+.greedy-nav .dropdown a:hover,
+.greedy-nav__dropdown a:hover {
+  color: #2980b9 !important;   /* hover blue */
 }
 
-.greedy-nav .navicon {
-    background: #ffffff !important;
-}
-
+/* Mobile nav hamburger icon */
+.greedy-nav .navicon,
 .greedy-nav .navicon:before,
 .greedy-nav .navicon:after {
-    background: #ffffff !important;
+  background: #ffffff !important;
 }
 
-/* Link Colors */
+/* ============================
+   Link Colors
+   ============================ */
 a {
-    color: #3498db !important;
-    text-decoration: none !important;
+  color: #3498db !important;
+  text-decoration: none !important;
 }
-
 a:hover {
-    color: #2980b9 !important;
-    text-decoration: underline !important;
+  color: #2980b9 !important;
+  text-decoration: underline !important;
 }
-
 a:visited {
-    color: #8e44ad !important;
+  color: #8e44ad !important;
 }
 
-/* Sidebar Styling */
+/* ============================
+   Sidebar Styling
+   ============================ */
 .sidebar {
-    background-color: #f8f9fa !important;
-    border-right: 1px solid #e1e8ed !important;
+  background-color: #f8f9fa !important;
+  border-right: 1px solid #e1e8ed !important;
 }
 
 .author__avatar img {
-    border: 3px solid #34495e !important;
+  border: 3px solid #34495e !important;
 }
 
 .author__content .author__name {
-    color: #2c3e50 !important;
+  color: #2c3e50 !important;
 }
 
 .author__content .author__bio {
-    color: #7f8c8d !important;
+  color: #7f8c8d !important;
 }
 
 .author__urls a {
-    color: #3498db !important;
+  color: #3498db !important;
 }
 
 .author__urls a:hover {
-    color: #2980b9 !important;
+  color: #2980b9 !important;
 }
 
-/* Main Content */
+/* ============================
+   Main Content
+   ============================ */
 body {
-    color: #2c3e50 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !important;
+  color: #2c3e50 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #2c3e50 !important;
+  color: #2c3e50 !important;
 }
 
-/* Buttons */
+/* ============================
+   Buttons
+   ============================ */
 .btn {
-    background-color: #3498db !important;
-    border: 1px solid #3498db !important;
-    color: #ffffff !important;
+  background-color: #3498db !important;
+  border: 1px solid #3498db !important;
+  color: #ffffff !important;
 }
-
 .btn:hover {
-    background-color: #2980b9 !important;
-    border-color: #2980b9 !important;
-    color: #ffffff !important;
+  background-color: #2980b9 !important;
+  border-color: #2980b9 !important;
+  color: #ffffff !important;
 }
 
-/* Footer */
+/* ============================
+   Footer
+   ============================ */
 .page__footer {
-    background-color: #34495e !important;
-    color: #ffffff !important;
+  background-color: #34495e !important;
+  color: #ffffff !important;
 }
-
 .page__footer a {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
-
 .page__footer a:hover {
-    color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* Code Blocks */
+/* ============================
+   Code Blocks
+   ============================ */
 pre,
 code {
-    background-color: #f8f9fa !important;
-    border: 1px solid #e1e8ed !important;
+  background-color: #f8f9fa !important;
+  border: 1px solid #e1e8ed !important;
 }
 
-/* Archive/List Items */
+/* ============================
+   Archive/List Items
+   ============================ */
 .archive__item-title a {
-    color: #3498db !important;
+  color: #3498db !important;
 }
-
 .archive__item-title a:hover {
-    color: #2980b9 !important;
+  color: #2980b9 !important;
 }
 
-/* Pagination */
+/* ============================
+   Pagination
+   ============================ */
 .pagination a {
-    color: #3498db !important;
-    border: 1px solid #e1e8ed !important;
+  color: #3498db !important;
+  border: 1px solid #e1e8ed !important;
 }
-
 .pagination a:hover {
-    background-color: #3498db !important;
-    color: #ffffff !important;
+  background-color: #3498db !important;
+  color: #ffffff !important;
 }
 
-/* Tables */
+/* ============================
+   Tables
+   ============================ */
 table {
-    border: 1px solid #e1e8ed !important;
+  border: 1px solid #e1e8ed !important;
 }
-
 th {
-    background-color: #f8f9fa !important;
-    color: #2c3e50 !important;
+  background-color: #f8f9fa !important;
+  color: #2c3e50 !important;
 }
 
-/* Forms */
+/* ============================
+   Forms
+   ============================ */
 input,
 textarea,
 select {
-    border: 1px solid #e1e8ed !important;
+  border: 1px solid #e1e8ed !important;
 }
-
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: #3498db !important;
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+  border-color: #3498db !important;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
 }
 
-/* Fix avatar shape/size */
+/* ============================
+   Fix avatar shape/size
+   ============================ */
 .author__avatar,
 .sidebar .author__avatar {
-  width: 180px !important;   /* keep container square */
+  width: 180px !important;
   height: 180px !important;
 }
-
 .author__avatar img,
 .sidebar .author__avatar img {
-  width: 160px !important;   /* match container */
+  width: 160px !important;
   height: 160px !important;
-  object-fit: cover !important;  /* crop evenly, no squish */
-  border-radius: 50% !important; /* perfect circle */
-  display: block;               /* avoid inline gaps */
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  display: block;
 }
+
 /* ============================
-   Mobile navigation text color
+   Mobile Navigation Text Fix
    ============================ */
 @media screen and (max-width: 768px) {
-  /* Text color inside collapsed nav menu */
   .greedy-nav a,
   .greedy-nav__dropdown a,
-  .greedy-nav .visible-links a {
-    color: #2c3e50 !important; /* dark gray text */
+  .greedy-nav .visible-links a,
+  .greedy-nav .hidden-links a {
+    color: #2c3e50 !important;
   }
 
-  /* Optional: hover color on mobile */
-  .greedy-nav a:hover {
-    color: #2980b9 !important; /* your blue hover */
+  .greedy-nav a:hover,
+  .greedy-nav__dropdown a:hover,
+  .greedy-nav .hidden-links a:hover {
+    color: #2980b9 !important;
   }
 }
