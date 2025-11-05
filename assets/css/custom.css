@@ -15,24 +15,11 @@
 }
 
 /* Top-level (visible) links stay white on desktop */
-.greedy-nav .visible-links > li > a {
+.masthead .greedy-nav .visible-links > li > a {
   color: #ffffff !important;
 }
-.greedy-nav .visible-links > li > a:hover {
+.masthead .greedy-nav .visible-links > li > a:hover {
   color: rgba(255, 255, 255, 0.8) !important;
-}
-
-/* Dropdown (hidden) links – used on mobile & overflow menu */
-.greedy-nav .hidden-links a,
-.greedy-nav .hidden-links a:visited,
-.greedy-nav .dropdown a,
-.greedy-nav__dropdown a {
-  color: #2c3e50 !important;   /* dark text so it shows on the light panel */
-}
-.greedy-nav .hidden-links a:hover,
-.greedy-nav .dropdown a:hover,
-.greedy-nav__dropdown a:hover {
-  color: #2980b9 !important;   /* hover blue */
 }
 
 /* Mobile nav hamburger icon */
@@ -200,19 +187,15 @@ select:focus {
 }
 
 /* ============================
-   Mobile Navigation Text Fix
+   Mobile dropdown text color (olive)
    ============================ */
 @media screen and (max-width: 768px) {
-  .greedy-nav a,
-  .greedy-nav__dropdown a,
-  .greedy-nav .visible-links a,
-  .greedy-nav .hidden-links a {
-    color: #2c3e50 !important;
+  /* Only the hidden overflow list used by the hamburger menu */
+  .masthead #site-nav.greedy-nav .hidden-links a,
+  .masthead #site-nav.greedy-nav .hidden-links a:visited {
+    color: #556b2f !important;   /* olive green */
   }
-
-  .greedy-nav a:hover,
-  .greedy-nav__dropdown a:hover,
-  .greedy-nav .hidden-links a:hover {
-    color: #2980b9 !important;
+  .masthead #site-nav.greedy-nav .hidden-links a:hover {
+    color: #6b8e23 !important;   /* lighter olive hover */
   }
 }
