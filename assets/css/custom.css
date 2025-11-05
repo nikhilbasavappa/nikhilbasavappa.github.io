@@ -171,3 +171,19 @@ select:focus {
   border-radius: 50% !important; /* perfect circle */
   display: block;               /* avoid inline gaps */
 }
+/* ============================
+   Mobile navigation text color
+   ============================ */
+@media screen and (max-width: 768px) {
+  /* Text color inside collapsed nav menu */
+  .greedy-nav a,
+  .greedy-nav__dropdown a,
+  .greedy-nav .visible-links a {
+    color: #2c3e50 !important; /* dark gray text */
+  }
+
+  /* Optional: hover color on mobile */
+  .greedy-nav a:hover {
+    color: #2980b9 !important; /* your blue hover */
+  }
+}
