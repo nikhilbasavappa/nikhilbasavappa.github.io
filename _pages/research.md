@@ -49,7 +49,8 @@ Funded by the Columbia University Program for Economic Research (PER) and the Ce
 ---
 
 **Frictions in Information Diffusion Among Smallholder Farmers**  
-with [Raissa Fabregas](https://sites.google.com/view/raissafabregas) and [Jack Willis](https://sites.google.com/view/jwillis/home?authuser=0)
+with [Raissa Fabregas](https://sites.google.com/view/raissafabregas) and [Jack Willis](https://sites.google.com/view/jwillis/home?authuser=0)  
+Funded by NBER Social Learning, IC2 UT Austin
 
 > Smallholder farmers vary substantially in agricultural know-how, even within the same village. Do farmers value others’ information and, if so, what prevents its diffusion? We measure knowledge of, and willingness-to-pay for, such information, and test interventions to encourage diffusion and identify the corresponding frictions.
 
