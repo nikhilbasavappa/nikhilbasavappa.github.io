@@ -27,10 +27,10 @@ Presented at [NetMob Conference, World Bank (2024)](https://netmob.org/www24/)<b
 > Weather shocks pose severe risks to agricultural communities in India. Information
 > on how to mitigate their effects, however, can be difficult to access, as it spreads slowly
 > through potentially sparse and distant social networks. Using novel cellphone mobility
-> data merged with over 1.5 million calls to India’s national agricultural helpline, we doc-
+> data merged with over 1.5 million calls to India’s national agricultural helpline, we doc
 > ument three patterns. First, mobility in rural India is severely constrained: over 75%
 > of areas exhibit primarily local travel. Second, we examine how mobility and helpline
-> calls correlate with climate shocks—heatwaves and extended droughts. While mobil-
+> calls correlate with climate shocks—heatwaves and extended droughts. While mobil
 > ity increases during heatwaves, helpline calls decline. Third, this relationship varies
 > systematically with baseline mobility levels: the negative association between climate
 > shocks and calls is significantly weaker in low-mobility areas across multiple measures of
