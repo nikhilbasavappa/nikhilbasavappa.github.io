@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduation Weekend — May 15–18, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2E5D4B;
+    --green-light: #3a7260;
+    --green-bg: #f0f5f2;
+    --cream: #faf8f5;
+    --warm: #f5f0eb;
+    --text: #2c3e35;
+    --text-light: #5a7565;
+    --border: #d8e0da;
+    --accent: #c8956c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Crimson Text', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 50%, var(--green) 100%);
+    padding: 40px 24px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .header-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  .header-note {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* Key info bar */
+  .key-info {
+    background: var(--green-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  .key-info strong {
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  /* Search */
+  .search-wrap {
+    max-width: 520px;
+    margin: 24px auto 8px;
+    padding: 0 20px;
+    position: relative;
+  }
+  .search-wrap input {
+    width: 100%;
+    padding: 14px 20px 14px 44px;
+    border-radius: 28px;
+    border: 1.5px solid var(--border);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .search-wrap input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(46,93,75,0.1);
+  }
+  .search-wrap input::placeholder { color: #9aaa9e; }
+  .search-icon {
+    position: absolute;
+    left: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9aaa9e;
+    font-size: 16px;
+    pointer-events: none;
+  }
+
+  /* Day filter tabs */
+  .day-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px 20px 8px;
+    flex-wrap: wrap;
+  }
+  .day-tab {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: #fff;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .day-tab:hover { border-color: var(--green); color: var(--green); }
+  .day-tab.active {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+
+  /* Content */
+  .content { max-width: 680px; margin: 0 auto; padding: 16px 20px 40px; }
+
+  /* Day section */
+  .day-section { margin-bottom: 32px; }
+  .day-header {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--green);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .day-emoji { font-size: 16px; }
+
+  /* Event card */
+  .event-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+  }
+  .event-card:hover {
+    border-color: var(--green);
+    box-shadow: 0 2px 12px rgba(46,93,75,0.08);
+  }
+  .event-card.highlight {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(200,149,108,0.15);
+  }
+  .event-time {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .event-name {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .reserved-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: var(--green-bg);
+    color: var(--green);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .event-address {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+  .event-details {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .event-card.open .event-details { display: block; }
+  .event-card.open { border-color: var(--green); }
+  .detail-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  .detail-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green);
+    min-width: 70px;
+    padding-top: 2px;
+  }
+  .detail-value {
+    color: var(--text);
+    flex: 1;
+  }
+  .expand-hint {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #b0bfb5;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+  }
+
+  /* Important notes */
+  .notes-section {
+    background: #fff8f0;
+    border: 1.5px solid #e8d5c0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+  .notes-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .note-item {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .note-item::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Reservations grid */
+  .res-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .res-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+  }
+  .res-card .res-name {
+    font-weight: 600;
+    color: var(--green);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .res-card .res-detail { color: var(--text-light); }
+  .res-card .res-phone {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-light);
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  @media (max-width: 480px) {
+    .header h1 { font-size: 26px; }
+    .key-info { flex-direction: column; align-items: center; gap: 4px; }
+    .event-name { font-size: 17px; }
+    .res-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-sub">May 15 – 18, 2026 · New York City</div>
+  <h1>🎓 Graduation Weekend</h1>
+  <div class="header-note">Tap any event for full details</div>
+</div>
+
+<div class="key-info">
+  <span><strong>Hotel:</strong> Arthouse Hotel · 2178 Broadway at W 77th St · <a href="tel:2123621100" style="color:var(--green)">(212) 362-1100</a></span>
+  <span><strong>Nikhil:</strong> 438 W 116th St, Apt 3A</span>
+</div>
+
+<div class="search-wrap">
+  <span class="search-icon">🔍</span>
+  <input type="text" id="searchInput" placeholder="Search (e.g. 'dinner', 'vegetarian', 'uber')...">
+</div>
+
+<div class="day-tabs" id="dayTabs">
+  <button class="day-tab active" data-day="all">All Days</button>
+  <button class="day-tab" data-day="fri">Friday</button>
+  <button class="day-tab" data-day="sat">Saturday</button>
+  <button class="day-tab" data-day="sun">Sunday</button>
+  <button class="day-tab" data-day="mon">Monday</button>
+</div>
+
+<div class="content" id="content">
+
+  <!-- FRIDAY -->
+  <div class="day-section" data-day="fri">
+    <div class="day-header"><span class="day-emoji">🌆</span> Friday, May 15 — Arrival</div>
+
+    <div class="event-card" data-search="elea greek dinner friday reserved vegetarian mezze walk walking">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">8:00 PM</div>
+      <div class="event-name">Dinner at Elea <span class="reserved-badge">Reserved</span></div>
+      <div class="event-address">217 W 85th St (between Amsterdam & Broadway)</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Cuisine</span><span class="detail-value">Greek — great mezze, dips, grilled whole fish. Plenty of vegetarian options for Mom.</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Nikhil, Mom, Dad, Megha, Nisha (party of 5)</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 10-min walk from hotel. Nikhil will meet you at the hotel.</span></div>
+        <div class="detail-row"><span class="detail-label">Phone</span><span class="detail-value"><a href="tel:2123699800" style="color:var(--green)">(212) 369-9800</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div class="day-section" data-day="sat">
+    <div class="day-header"><span class="day-emoji">🏛️</span> Saturday, May 16 — Exploring the UWS</div>
+
+    <div class="event-card" data-search="museum natural history amnh saturday morning gilder walk walking">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">10:00 AM</div>
+      <div class="event-name">American Museum of Natural History</div>
+      <div class="event-address">200 Central Park West</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Notes</span><span class="detail-value">Opens at 10. Budget about 2 hours. Don't miss the Gilder Center!</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Nikhil, Mom, Dad, Megha</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 10-min walk from hotel (head east on 77th to Central Park West)</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="saravana bhavan lunch saturday vegetarian indian dosa south walk walking">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">12:15 PM</div>
+      <div class="event-name">Lunch at Saravana Bhavan</div>
+      <div class="event-address">413 Amsterdam Ave (at 80th)</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Cuisine</span><span class="detail-value">South Indian vegetarian — masala dosa and filter coffee are musts!</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Nikhil, Mom, Dad, Megha</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 10-min walk from the museum</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="ellington park drinks saturday afternoon reserved uber friends hudson riverside">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">3:00 – 6:00 PM</div>
+      <div class="event-name">Ellington in the Park <span class="reserved-badge">Reserved</span></div>
+      <div class="event-address">Riverside Dr & W 105th St</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Notes</span><span class="detail-value">Outdoor spot in Riverside Park overlooking the Hudson. Relaxed afternoon vibes.</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Nikhil, Mom, Dad, Megha, Nisha + friends and their families</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚕 Uber from Saravana Bhavan (~10 min)</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="massawa dinner saturday reserved ethiopian eritrean vegetarian walk walking nikhil apartment">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">7:30 PM</div>
+      <div class="event-name">Dinner at Massawa <span class="reserved-badge">Reserved</span></div>
+      <div class="event-address">1239 Amsterdam Ave (at 121st)</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Cuisine</span><span class="detail-value">Eritrean/Ethiopian — tons of vegetarian options for Mom.</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Nikhil, Mom, Dad, Megha, Nisha (party of 5)</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 15-min walk from Ellington, heading north. Near Nikhil's apartment.</span></div>
+        <div class="detail-row"><span class="detail-label">Phone</span><span class="detail-value"><a href="tel:2126630505" style="color:var(--green)">(212) 663-0505</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUNDAY -->
+  <div class="day-section" data-day="sun">
+    <div class="day-header"><span class="day-emoji">🎓</span> Sunday, May 17 — Graduation Day</div>
+
+    <!-- Important notes for graduation -->
+    <div class="notes-section">
+      <div class="notes-title">⚠️ Important — Please Read</div>
+      <div class="note-item"><strong>No bags or gifts</strong> permitted at the ceremony — leave them at Nikhil's apartment. Only wallets and small clutches (subject to screening).</div>
+      <div class="note-item"><strong>Tickets:</strong> You should have received yours by email. Nikhil will also have printed copies, but each guest needs their own scannable ticket (phone or print).</div>
+      <div class="note-item">The ceremony is <strong>outdoors</strong> on the South Lawn — dress for the weather.</div>
+      <div class="note-item">Assigned entrance: <strong>W 120th St & Broadway</strong>. Accessibility entrance: W 116th St & Amsterdam.</div>
+    </div>
+
+    <div class="event-card" data-search="apartment gather sunday morning uber bags drop off">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">~11:00 AM</div>
+      <div class="event-name">Gather at Nikhil's Apartment</div>
+      <div class="event-address">438 W 116th St, Apt 3A</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Notes</span><span class="detail-value">Drop off bags, regroup, and get ready to walk over together.</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Everyone</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚕 Uber from hotel (~15 min)</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="walk entrance gates ceremony sunday">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">~11:15 AM</div>
+      <div class="event-name">Walk to Ceremony Entrance</div>
+      <div class="event-address">W 120th St & Broadway</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Notes</span><span class="detail-value">Gates open at 11:30 AM. This is our assigned entrance.</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Everyone</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 5-min walk from Nikhil's apartment</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="graduation convocation ceremony columbia sunday tickets">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">12:30 PM</div>
+      <div class="event-name">GSAS Doctoral Convocation 🎓</div>
+      <div class="event-address">South Lawn, Morningside Campus, Columbia University</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Notes</span><span class="detail-value">Each guest needs their own scannable ticket (phone or printed). Nikhil will have printed copies for everyone.</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Everyone</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="arts crafts beer celebrate sunday walk vegan">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">~2:00 PM</div>
+      <div class="event-name">Arts and Crafts Beer Parlor 🍻</div>
+      <div class="event-address">1135 Amsterdam Ave (near 116th)</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Notes</span><span class="detail-value">All-vegan gastropub. Celebratory beers! Near Nikhil's apartment.</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Family + friends</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 Short walk from the ceremony</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="freshen up change hotel uber afternoon sunday">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">Afternoon</div>
+      <div class="event-name">Free Time / Freshen Up</div>
+      <div class="event-address">Back to hotel</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Notes</span><span class="detail-value">Head back to the hotel to change for dinner.</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚕 Uber back to hotel (~15 min)</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="carmines carmine italian dinner sunday reserved walk walking tushar ricardo party">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">7:00 PM</div>
+      <div class="event-name">Dinner at Carmine's <span class="reserved-badge">Reserved</span></div>
+      <div class="event-address">2450 Broadway (at 91st)</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Cuisine</span><span class="detail-value">Family-style Italian — huge portions, perfect for celebrating!</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Party of 16: Nikhil, Mom, Dad, Megha, Meera, Nisha + Tushar's family + Ricardo's family</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 15-min walk from hotel, straight up Broadway</span></div>
+        <div class="detail-row"><span class="detail-label">Phone</span><span class="detail-value"><a href="tel:2123622200" style="color:var(--green)">(212) 362-2200</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MONDAY -->
+  <div class="day-section" data-day="mon">
+    <div class="day-header"><span class="day-emoji">🎂</span> Monday, May 18 — Megha's Birthday Brunch & Departure</div>
+
+    <div class="event-card" data-search="french roast brunch monday reserved birthday megha walk walking french brasserie">
+      <span class="expand-hint">tap for details</span>
+      <div class="event-time">11:00 AM</div>
+      <div class="event-name">Birthday Brunch at French Roast 🎂 <span class="reserved-badge">Reserved</span></div>
+      <div class="event-address">2340 Broadway (at 85th)</div>
+      <div class="event-details">
+        <div class="detail-row"><span class="detail-label">Cuisine</span><span class="detail-value">French brasserie — shakshuka, croque madame, French toast. Happy birthday, Megha!</span></div>
+        <div class="detail-row"><span class="detail-label">Who</span><span class="detail-value">Nikhil, Mom, Dad, Megha (party of 4)</span></div>
+        <div class="detail-row"><span class="detail-label">Getting there</span><span class="detail-value">🚶 10-min walk from hotel</span></div>
+      </div>
+    </div>
+
+    <div class="event-card" data-search="departure leave monday midday">
+      <div class="event-time">Midday</div>
+      <div class="event-name">Departure ✈️</div>
+      <div class="event-address">Safe travels!</div>
+    </div>
+  </div>
+
+  <!-- Reservations -->
+  <div class="day-section" data-day="all" id="reservationsSection">
+    <div class="day-header"><span class="day-emoji">📋</span> All Reservations</div>
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-name">Elea</div>
+        <div class="res-detail">Fri 8:00 PM · Party of 5</div>
+        <a href="tel:2123699800" class="res-phone">(212) 369-9800</a>
+      </div>
+      <div class="res-card">
+        <div class="res-name">Ellington in the Park</div>
+        <div class="res-detail">Sat 3:00 PM · Reserved</div>
+      </div>
+      <div class="res-card">
+        <div class="res-name">Massawa</div>
+        <div class="res-detail">Sat 7:30 PM · Party of 5</div>
+        <a href="tel:2126630505" class="res-phone">(212) 663-0505</a>
+      </div>
+      <div class="res-card">
+        <div class="res-name">Carmine's</div>
+        <div class="res-detail">Sun 7:00 PM · Party of 16</div>
+        <a href="tel:2123622200" class="res-phone">(212) 362-2200</a>
+      </div>
+      <div class="res-card">
+        <div class="res-name">French Roast</div>
+        <div class="res-detail">Mon 11:00 AM · Party of 4</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-results" id="noResults" style="display:none;">
+    No events found — try a different search term.
+  </div>
+
+</div>
+
+<script>
+  // Tab filtering
+  document.querySelectorAll('.day-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      filterContent();
+    });
+  });
+
+  // Card expand/collapse
+  document.querySelectorAll('.event-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const wasOpen = card.classList.contains('open');
+      // Close all others
+      document.querySelectorAll('.event-card').forEach(c => c.classList.remove('open'));
+      if (!wasOpen) card.classList.add('open');
+    });
+  });
+
+  // Search
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', () => filterContent());
+
+  function filterContent() {
+    const activeDay = document.querySelector('.day-tab.active').dataset.day;
+    const query = searchInput.value.toLowerCase().trim();
+    const sections = document.querySelectorAll('.day-section');
+    const resSection = document.getElementById('reservationsSection');
+    let anyVisible = false;
+
+    sections.forEach(section => {
+      const sectionDay = section.dataset.day;
+
+      // Reservations section: show only on "all" tab with no search, or if search matches
+      if (section === resSection) {
+        if (query) {
+          section.style.display = 'reservation phone number call'.includes(query) ? '' : 'none';
+          if (section.style.display !== 'none') anyVisible = true;
+        } else {
+          section.style.display = (activeDay === 'all') ? '' : 'none';
+          if (section.style.display !== 'none') anyVisible = true;
+        }
+        return;
+      }
+
+      // Day filter
+      if (activeDay !== 'all' && sectionDay !== activeDay) {
+        section.style.display = 'none';
+        return;
+      }
+
+      if (!query) {
+        section.style.display = '';
+        section.querySelectorAll('.event-card').forEach(c => {
+          c.style.display = '';
+          c.classList.remove('highlight');
+        });
+        // Show notes section
+        section.querySelectorAll('.notes-section').forEach(n => n.style.display = '');
+        anyVisible = true;
+        return;
+      }
+
+      // Search within cards
+      let sectionHasMatch = false;
+      section.querySelectorAll('.event-card').forEach(card => {
+        const text = (card.textContent + ' ' + (card.dataset.search || '')).toLowerCase();
+        const match = text.includes(query);
+        card.style.display = match ? '' : 'none';
+        card.classList.toggle('highlight', match);
+        if (match) {
+          sectionHasMatch = true;
+          // Auto-expand matching cards
+          card.classList.add('open');
+        }
+      });
+
+      // Also check notes section
+      section.querySelectorAll('.notes-section').forEach(n => {
+        const noteText = n.textContent.toLowerCase();
+        const noteMatch = noteText.includes(query);
+        n.style.display = noteMatch ? '' : 'none';
+        if (noteMatch) sectionHasMatch = true;
+      });
+
+      section.style.display = sectionHasMatch ? '' : 'none';
+      if (sectionHasMatch) anyVisible = true;
+    });
+
+    document.getElementById('noResults').style.display = anyVisible ? 'none' : '';
+  }
+</script>
+
+</body>
+</html>
